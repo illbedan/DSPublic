@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <cmud>
-<window name="DSPublic" statusbar="false" left="438" top="120" width="1012" height="1183">
+<window name="DSPublic" statusbar="false" left="438" top="120" width="1499" height="1237">
   <uid>{601F6102-6F51-4839-B1E5-381D54467980}</uid>
   <packages>English Directions|English Keypad|Clickable URLs|unsavory|DSPublic</packages>
   <tab name="score"/>
@@ -20,8 +20,8 @@ affectslist.%1=-1</value>
 affectslist.%1=(%2*30*24+%3*30+%4/2)</value>
     </trigger>
     <var name="affectslist" type="Record" sorted="1">
-      <value>Darkvision=-1|Regenerate=-1|Contingency=-1|Bless=1|Blindness=1|Prayer=1|Haste=1|Blood Mirror=1</value>
-      <json>{"Regenerate":-1,"Blindness":1,"Prayer":1,"Haste":1,"Blood Mirror":1,"Contingency":-1,"Darkvision":-1,"Bless":1}</json>
+      <value>Contingency=-1|Darkvision=-1</value>
+      <json>{"Contingency":-1,"Darkvision":-1}</json>
     </var>
     <trigger priority="730">
       <pattern>------ Affecting Spells ------</pattern>
@@ -63,8 +63,8 @@ aff group]]></value>
       <json>["Your thoughts and body become as one!",["You smile as an armor spell is now protecting you.","You catch a glimpse of a shining armor hanging in the air, then it goes invisible.","You catch a glimpse of a shining armor hanging in the air around you, then it goes invisible.","With a flick of your hand you call upon magic to protect you.","The Lords of Orhan accept your plea for protection.","The Lords of Orhan elect to renew your armor spell.","You concentrate upon your magic armor and channel more power into it.","You update your armor spell.","You feel the Lords of Orhan protecting you.","You feel someone protecting you."],["Eight-inch, wickedly-sharp thorns sprout from your barkskin!","You make your armor of thorns denser."],"You radiate pure evil as despair fills your heart.",["Ah, much better now I look like a tree...","You remove the old dry bark, replacing it with a new fresh one."],"You mumble a word of turning. Be gone blades!",["You bless yourself again, for safety's sake","You bless yourself. Glory B!","You feel righteous.","You wield the Warhammer of Justice."],["You focus your energy and create a reflective shield about your body.","You renew your magical forcefield."],["You start to blur in and out of phase.","You blur a bit longer."],["Combat we shall, Now fast and hard!","You will keep yourself alert for a while longer."],"Ouch! That Really did HURT!",["The dark elemental blesses you with the power to see in the dark.","The dark elemental agrees to renew your darkvision."],["Your eyes tingle.","Your eyes tingle briefly."],["You grow small black bat-wings and start flapping.","You make your wings stay longer."],"You focus your mind and create a magical force field around you.",["You feel your muscles grow and stretch!","You already look like a bear!"],["Suddenly the world starts to slow down.","Cool it, any more haste and you would get a heart attack."],["You make your holy suit of armor stay a while longer.","You make the sign of the cross. Protect me my deity!"],"May the god be with me.","You burst into flames but suddenly realize your mistake and quickly transform fire to ice.","You throw a handful of sulphur over your head and ignite it!","You vanish","zxcoiuqr3nlkndsf",["You renew your ties to life blood.","A warm feeling fills your body as you channel life's blood from within."],["You rip a rift in the space-time continuum connecting your soul with your body.","You strain yourself to hold up the space time continuum rift a little longer."],"You become a blur of kaleidoscopic color and split into mirror images of yourself.","asdlkjfasoiagfalkjasdf",["You feel spiritual.","You pray for yourself again, for safety's sake."],["You have a righteous feeling!","Praise the Lords, your plea for extra protection is granted!"],["You feel a slight sensation as your body system speeds up.","You feel comfortable as the regenerative powers are prolonged.","You feel comfortable as you prolong your regenerative powers."],"You bleed more freely but you feel an inner energy building inside you.",["You start glowing.","You glow even brighter."],"zxcvoisdafn,emwanfewaoiy","The shadow realm engulfs your body. You stop breathing.",["You can sense the protection of a thousand heroes.","The ancient spirits channel their power into your armor.","You hear the faint murmours of past warriors as a faint purple light surrounds you."],["You feel stronger.","You tense your hard muscles."],["You feel the heat of the sun as you start glowing.","Sunny day today, isn't?"],"You are protected from great harm!!!",["New power pumps your veins!","You leech your lifeforce, aahhhh the POWER!"],"No pain no gain!","You ask your god to strengthen your resolve in combat.","You are blind!",["Your weapon starts to drip with vile green poison.","Nothing new seems to happen."],"The spirits of the shadowrealms watches over you!","You invoke the power of darkness.","You wield the Warhammer of Justice."]</json>
     </var>
     <var name="affoutlist" type="StringList">
-      <value>Your deadly concentration breaks.|"You feel less protected.|You see a shining set of armor materialize in the air before you, then it suddenly dissolves."|Your thorns wither to death and drop to your feet.|Your aura of despair dissolves.|You once again feel naked.|You can no longer sense your invisible sphere of turning.|"You feel less righteous.|You stop using the Warhammer of Justice."|Your magical forcefield dissolves as the effort to maintain it becomes too much.|You stop blurring!|You relax a bit.|"You feel somewhat better as|You feel somewhat better."|Your ability to see in the dark is no more.|The detect invisible wears off.|The wings on your back shrink into nothingness.|You now feel all of your opponents blows.|You feel much weaker.|The world suddenly starts spinning.|Your holy suit of armor dissolves.|God is no longer with you and your holy aura fades away.|Water begins to flow from your shoulders, it's springtime!|Hmmm... Seems like sulphur don't burn too long :(|"You become visible again.|You feel yourself exposed."|asdofdiuzxv|Your ties with life's blood fades.|You let out a soft sigh as the space time continuum returns to normal.|Your kaleidoscopic mirage collapses in on itself as the magics expire.|A warm feeling runs through your body.|You feel less spiritual.|You feel less protected from all the horrible things in the world.|You shiver slightly as your body system slows down.|You feel better as your magical field dissolves.|The white aura around your body fades.|asdfiozxcvoiuzkhwefkbj|You return to your original form.|The spirits of the past return to their alternate existence along with your magical protection.|You feel weaker.|Your sun shield wears off.|"Your surroundings start to change!|Your contingency fails, TOUGH LUCK!"|Finally you feel that your health is restored!|You grind your teeth in pain as you realize how hurt you actually are.|You seem a little less faithful.|"The cloak of blindness around  you dissolves|You feel better. Your vision returns!|Your vision returns!"|The last drop of venom drips off of|Your shadow enshrouds you!|You stretch out for your shadow...|Your shadow hums innocently as it pretends to protect you!</value>
-      <json>["Your deadly concentration breaks.",["You feel less protected.","You see a shining set of armor materialize in the air before you, then it suddenly dissolves."],"Your thorns wither to death and drop to your feet.","Your aura of despair dissolves.","You once again feel naked.","You can no longer sense your invisible sphere of turning.",["You feel less righteous.","You stop using the Warhammer of Justice."],"Your magical forcefield dissolves as the effort to maintain it becomes too much.","You stop blurring!","You relax a bit.",["You feel somewhat better as","You feel somewhat better."],"Your ability to see in the dark is no more.","The detect invisible wears off.","The wings on your back shrink into nothingness.","You now feel all of your opponents blows.","You feel much weaker.","The world suddenly starts spinning.","Your holy suit of armor dissolves.","God is no longer with you and your holy aura fades away.","Water begins to flow from your shoulders, it's springtime!","Hmmm... Seems like sulphur don't burn too long :(",["You become visible again.","You feel yourself exposed."],"asdofdiuzxv","Your ties with life's blood fades.","You let out a soft sigh as the space time continuum returns to normal.","Your kaleidoscopic mirage collapses in on itself as the magics expire.","A warm feeling runs through your body.","You feel less spiritual.","You feel less protected from all the horrible things in the world.","You shiver slightly as your body system slows down.","You feel better as your magical field dissolves.","The white aura around your body fades.","asdfiozxcvoiuzkhwefkbj","You return to your original form.","The spirits of the past return to their alternate existence along with your magical protection.","You feel weaker.","Your sun shield wears off.",["Your surroundings start to change!","Your contingency fails, TOUGH LUCK!"],"Finally you feel that your health is restored!","You grind your teeth in pain as you realize how hurt you actually are.","You seem a little less faithful.",["The cloak of blindness around  you dissolves","You feel better. Your vision returns!","Your vision returns!"],"The last drop of venom drips off of","Your shadow enshrouds you!","You stretch out for your shadow...","Your shadow hums innocently as it pretends to protect you!"]</json>
+      <value>Your deadly concentration breaks.|"You feel less protected.|You see a shining set of armor materialize in the air before you, then it suddenly dissolves."|Your thorns wither to death and drop to your feet.|Your aura of despair dissolves.|You once again feel naked.|You can no longer sense your invisible sphere of turning.|"You feel less righteous.|You stop using the Warhammer of Justice."|Your magical forcefield dissolves as the effort to maintain it becomes too much.|You stop blurring!|You relax a bit.|"You feel somewhat better as|You feel somewhat better."|Your ability to see in the dark is no more.|The detect invisible wears off.|The wings on your back shrink into nothingness.|You now feel all of your opponents blows.|You feel much weaker.|The world suddenly starts spinning.|Your holy suit of armor dissolves.|God is no longer with you and your holy aura fades away.|Water begins to flow from your shoulders, it's springtime!|Hmmm... Seems like sulphur don't burn too long :(|"You become visible again.|You feel yourself exposed."|asdofdiuzxv|Your ties with life's blood fades.|You let out a soft sigh as the space time continuum returns to normal.|Your kaleidoscopic mirage collapses in on itself as the magics expire.|A warm feeling runs through your body.|You feel less spiritual.|You feel less protected from all the horrible things in the world.|You shiver slightly as your body system slows down.|You feel better as your magical field dissolves.|The white aura around your body fades.|asdfiozxcvoiuzkhwefkbj|You return to your original form.|The spirits of the past return to their alternate existence along with your magical protection.|You feel weaker.|Your sun shield wears off.|"Your surroundings start to change!|Your contingency fails, TOUGH LUCK!"|Finally you feel that your health is restored!|You grind your teeth in pain as you realize how hurt you actually are.|You seem a little less faithful.|"The cloak of blindness around you dissolves|You feel better. Your vision returns!|Your vision returns!"|The last drop of venom drips off of|Your shadow enshrouds you!|You stretch out for your shadow...|Your shadow hums innocently as it pretends to protect you!|</value>
+      <json>["Your deadly concentration breaks.",["You feel less protected.","You see a shining set of armor materialize in the air before you, then it suddenly dissolves."],"Your thorns wither to death and drop to your feet.","Your aura of despair dissolves.","You once again feel naked.","You can no longer sense your invisible sphere of turning.",["You feel less righteous.","You stop using the Warhammer of Justice."],"Your magical forcefield dissolves as the effort to maintain it becomes too much.","You stop blurring!","You relax a bit.",["You feel somewhat better as","You feel somewhat better."],"Your ability to see in the dark is no more.","The detect invisible wears off.","The wings on your back shrink into nothingness.","You now feel all of your opponents blows.","You feel much weaker.","The world suddenly starts spinning.","Your holy suit of armor dissolves.","God is no longer with you and your holy aura fades away.","Water begins to flow from your shoulders, it's springtime!","Hmmm... Seems like sulphur don't burn too long :(",["You become visible again.","You feel yourself exposed."],"asdofdiuzxv","Your ties with life's blood fades.","You let out a soft sigh as the space time continuum returns to normal.","Your kaleidoscopic mirage collapses in on itself as the magics expire.","A warm feeling runs through your body.","You feel less spiritual.","You feel less protected from all the horrible things in the world.","You shiver slightly as your body system slows down.","You feel better as your magical field dissolves.","The white aura around your body fades.","asdfiozxcvoiuzkhwefkbj","You return to your original form.","The spirits of the past return to their alternate existence along with your magical protection.","You feel weaker.","Your sun shield wears off.",["Your surroundings start to change!","Your contingency fails, TOUGH LUCK!"],"Finally you feel that your health is restored!","You grind your teeth in pain as you realize how hurt you actually are.","You seem a little less faithful.",["The cloak of blindness around you dissolves","You feel better. Your vision returns!","Your vision returns!"],"The last drop of venom drips off of","Your shadow enshrouds you!","You stretch out for your shadow...","Your shadow hums innocently as it pretends to protect you!",""]</json>
     </var>
     <trigger priority="980">
       <pattern>^({@affinlist})$</pattern>
@@ -73,8 +73,8 @@ aff group]]></value>
     </trigger>
     <var name="tempvar">Sanctuary</var>
     <var name="affectstokeep" type="StringList">
-      <value>Haste|Holy Armor|Blood Mirror|Prayer|Contingency</value>
-      <json>["Haste","Holy Armor","Blood Mirror","Prayer","Contingency"]</json>
+      <value>Barkskin|Armor Of Thorns</value>
+      <json>["Barkskin","Armor Of Thorns"]</json>
     </var>
     <alias name="determineaffectstokeep">
       <value><![CDATA[affectstokeep=""
@@ -175,7 +175,7 @@ aff group]]></value>
   #IF (@getregen and %null(@affectslist.Regenerate)) {ask @askregenchar regen}
 }</value>
     </alias>
-    <var name="askregenchar">Shroom</var>
+    <var name="askregenchar">Akira</var>
     <var name="getregen">1</var>
     <alias name="immo">
       <value>#IF @leading {gt immo %1}
@@ -191,8 +191,8 @@ aff group]]></value>
       <json>{"The ancient spirits channel their power into your armor.":"Spirit Armor","You become a blur of kaleidoscopic color and split into mirror images of yourself.":"Mirror Image","You feel comfortable as you prolong your regenerative powers.":"Regenerate","Your thoughts and body become as one!":"Adrenal Focus","Praise the Lords, your plea for extra protection is granted!":"Protection","You mumble a word of turning. Be gone blades!":"Bladeturn","You feel righteous.":"Bless","You pray for yourself again, for safety's sake.":"Prayer","You feel someone protecting you.":"Armor","You catch a glimpse of a shining armor hanging in the air, then it goes invisible.":"Armor","asdlkjfasoiagfalkjasdf":"Poison","The dark elemental agrees to renew your darkvision.":"Darkvision","You throw a handful of sulphur over your head and ignite it!":"Immolation Fire","You focus your mind and create a magical force field around you.":"Force Field","You remove the old dry bark, replacing it with a new fresh one.":"Barkskin","You blur a bit longer.":"Blur","You bless yourself. Glory B!":"Bless","The spirits of the shadowrealms watches over you!":"Deathshadow","You grow small black bat-wings and start flapping.":"Fly","You feel comfortable as the regenerative powers are prolonged.":"Regenerate","You rip a rift in the space-time continuum connecting your soul with your body.":"Mana Shield","The Lords of Orhan accept your plea for protection.":"Armor","You strain yourself to hold up the space time continuum rift a little longer.":"Mana Shield","You renew your ties to life blood.":"Life Blood","You bless yourself again, for safety's sake":"Bless","Your eyes tingle.":"Detect Invisibility","You feel the heat of the sun as you start glowing.":"Sun Shield","You hear the faint murmours of past warriors as a faint purple light surrounds you.":"Spirit Armor","You wield the Warhammer of Justice":"Bless","Cool it, any more haste and you would get a heart attack.":"Haste","zxcoiuqr3nlkndsf":"Invisibility","You concentrate upon your magic armor and channel more power into it.":"Armor","Suddenly the world starts to slow down.":"Haste","Your weapon starts to drip with vile green poison.":"Venom","You can sense the protection of a thousand heroes.":"Spirit Armor","You focus your energy and create a reflective shield about your body.":"Blood Mirror","You invoke the power of darkness.":"Shadow Displacement","You will keep yourself alert for a while longer.":"Combat","The Lords of Orhan elect to renew your armor spell.":"Armor","You feel a slight sensation as your body system speeds up.":"Regenerate","You make your holy suit of armor stay a while longer.":"Holy Armor","You burst into flames but suddenly realize your mistake and quickly transform fire to ice.":"Immolation Cold","You make your wings stay longer.":"Fly","You ask your god to strengthen your resolve in combat.":"Gods Blessing","You tense your hard muscles.":"Strength","Ouch! That Really did HURT!":"Critical Wounds","zxcvoisdafn,emwanfewaoiy":"Serenity","A warm feeling fills your body as you channel life's blood from within.":"Life Blood","Your eyes tingle briefly.":"Detect Invisibility","You start glowing.":"Sanctuary","Sunny day today, isn't?":"Sun Shield","You make the sign of the cross. Protect me my deity!":"Holy Armor","You vanish":"Improved Invisibility","Combat we shall, Now fast and hard!":"Combat","You feel stronger.":"Strength","You have a righteous feeling!":"Protection","Ah, much better now I look like a tree...":"Barkskin","New power pumps your veins!":"Blood Rite","Nothing new seems to happen.":"Venom","The dark elemental blesses you with the power to see in the dark.":"Darkvision","You radiate pure evil as despair fills your heart.":"Aura Of Despair","You wield the Warhammer of Justice.":"Bless","You catch a glimpse of a shining armor hanging in the air around you, then it goes invisible.":"Armor","With a flick of your hand you call upon magic to protect you.":"Armor","Eight-inch, wickedly-sharp thorns sprout from your barkskin!":"Armor Of Thorns","You renew your magical forcefield.":"Blood Mirror","You bleed more freely but you feel an inner energy building inside you.":"Ritual Of Pain","No pain no gain!":"Mountain Heart","May the god be with me.":"Holy Aura","The shadow realm engulfs your body. You stop breathing.":"Shadow Form","You update your armor spell.":"Armor","You glow even brighter.":"Sanctuary","You leech your lifeforce, aahhhh the POWER!":"Blood Rite","You feel the Lords of Orhan protecting you.":"Armor","You already look like a bear!":"Giant Size","You are protected from great harm!!!":"Contingency","You make your armor of thorns denser.":"Armor Of Thorns","You smile as an armor spell is now protecting you.":"Armor","You start to blur in and out of phase.":"Blur","You feel spiritual.":"Prayer","You feel your muscles grow and stretch!":"Giant Size","You are blind!":"Blindness"}</json>
     </var>
     <var name="affouttoname" type="Record">
-      <value>Your magical forcefield dissolves as the effort to maintain it becomes too much.=Blood Mirror|You relax a bit.=Combat|The detect invisible wears off.=Detect Invisibility|Your holy suit of armor dissolves.=Holy Armor|You feel less righteous.=Bless|The wings on your back shrink into nothingness.=Fly|Your deadly concentration breaks.=Adrenal Focus|You feel less protected.=Armor|The spirits of the past return to their alternate existence along with your magical protection.=Spirit Armor|Your surroundings start to change!=Contingency|Your aura of despair dissolves.=Aura Of Despair|Your ability to see in the dark is no more.=Darkvision|You now feel all of your opponents blows.=Force Field|Finally you feel that your health is restored!=Blood Rite|You feel less protected from all the horrible things in the world.=Protection|asdofdiuzxv=Invisibility|Your kaleidoscopic mirage collapses in on itself as the magics expire.=Mirror Image|Your contingency fails, TOUGH LUCK!=Contingency|You grind your teeth in pain as you realize how hurt you actually are.=Mountain Heart|Your ties with life's blood fades.=Life Blood|You feel weaker.=Strength|Your thorns wither to death and drop to your feet.=Armor Of Thorns|Water begins to flow from your shoulders, it's springtime!=Immolation Cold|You shiver slightly as your body system slows down.=Regenerate|God is no longer with you and your holy aura fades away.=Holy Aura|You return to your original form.=Shadow Form|The world suddenly starts spinning.=Haste|The last drop of venom drips off of=Venom|You feel better as your magical field dissolves.=Ritual Of Pain|You let out a soft sigh as the space time continuum returns to normal.=Mana Shield|You become visible again.=Improved Invisibility|You see a shining set of armor materialize in the air before you, then it suddenly dissolves.=Armor|Your sun shield wears off.=Sun Shield|Your shadow enshrouds you!=Deathshadow|You stop using the Warhammer of Justice.=Bless|You seem a little less faithful.=Gods Blessing|You stop blurring!=Blur|You feel better. Your vision returns!=Blindness|Hmmm... Seems like sulphur don't burn too long :(=Immolation Fire|The cloak of blindness around  you dissolves=Blindness|You feel somewhat better.=Critical Wounds|A warm feeling runs through your body.=Poison|You feel much weaker.=Giant Size|The white aura around your body fades.=Sanctuary|You stretch out for your shadow...=Shadow Displacement|You once again feel naked.=Barkskin|You feel yourself exposed.=Improved Invisibility|You can no longer sense your invisible sphere of turning.=Bladeturn|You feel somewhat better as=Critical Wounds|Your shadow hums innocently as it pretends to protect you!=Deathshadow|asdfiozxcvoiuzkhwefkbj=Serenity|You feel less spiritual.=Prayer</value>
-      <json>{"Your magical forcefield dissolves as the effort to maintain it becomes too much.":"Blood Mirror","You relax a bit.":"Combat","The detect invisible wears off.":"Detect Invisibility","Your holy suit of armor dissolves.":"Holy Armor","You feel less righteous.":"Bless","The wings on your back shrink into nothingness.":"Fly","Your deadly concentration breaks.":"Adrenal Focus","You feel less protected.":"Armor","The spirits of the past return to their alternate existence along with your magical protection.":"Spirit Armor","Your surroundings start to change!":"Contingency","Your aura of despair dissolves.":"Aura Of Despair","Your ability to see in the dark is no more.":"Darkvision","You now feel all of your opponents blows.":"Force Field","Finally you feel that your health is restored!":"Blood Rite","You feel less protected from all the horrible things in the world.":"Protection","asdofdiuzxv":"Invisibility","Your kaleidoscopic mirage collapses in on itself as the magics expire.":"Mirror Image","Your contingency fails, TOUGH LUCK!":"Contingency","You grind your teeth in pain as you realize how hurt you actually are.":"Mountain Heart","Your ties with life's blood fades.":"Life Blood","You feel weaker.":"Strength","Your thorns wither to death and drop to your feet.":"Armor Of Thorns","Water begins to flow from your shoulders, it's springtime!":"Immolation Cold","You shiver slightly as your body system slows down.":"Regenerate","God is no longer with you and your holy aura fades away.":"Holy Aura","You return to your original form.":"Shadow Form","The world suddenly starts spinning.":"Haste","The last drop of venom drips off of":"Venom","You feel better as your magical field dissolves.":"Ritual Of Pain","You let out a soft sigh as the space time continuum returns to normal.":"Mana Shield","You become visible again.":"Improved Invisibility","You see a shining set of armor materialize in the air before you, then it suddenly dissolves.":"Armor","Your sun shield wears off.":"Sun Shield","Your shadow enshrouds you!":"Deathshadow","You stop using the Warhammer of Justice.":"Bless","You seem a little less faithful.":"Gods Blessing","You stop blurring!":"Blur","You feel better. Your vision returns!":"Blindness","Hmmm... Seems like sulphur don't burn too long :(":"Immolation Fire","The cloak of blindness around  you dissolves":"Blindness","You feel somewhat better.":"Critical Wounds","A warm feeling runs through your body.":"Poison","You feel much weaker.":"Giant Size","The white aura around your body fades.":"Sanctuary","You stretch out for your shadow...":"Shadow Displacement","You once again feel naked.":"Barkskin","You feel yourself exposed.":"Improved Invisibility","You can no longer sense your invisible sphere of turning.":"Bladeturn","You feel somewhat better as":"Critical Wounds","Your shadow hums innocently as it pretends to protect you!":"Deathshadow","asdfiozxcvoiuzkhwefkbj":"Serenity","You feel less spiritual.":"Prayer"}</json>
+      <value>Your magical forcefield dissolves as the effort to maintain it becomes too much.=Blood Mirror|You relax a bit.=Combat|The detect invisible wears off.=Detect Invisibility|Your holy suit of armor dissolves.=Holy Armor|You feel less righteous.=Bless|The wings on your back shrink into nothingness.=Fly|Your deadly concentration breaks.=Adrenal Focus|You feel less protected.=Armor|The spirits of the past return to their alternate existence along with your magical protection.=Spirit Armor|Your surroundings start to change!=Contingency|Your aura of despair dissolves.=Aura Of Despair|Your ability to see in the dark is no more.=Darkvision|You now feel all of your opponents blows.=Force Field|Finally you feel that your health is restored!=Blood Rite|You feel less protected from all the horrible things in the world.=Protection|asdofdiuzxv=Invisibility|Your kaleidoscopic mirage collapses in on itself as the magics expire.=Mirror Image|Your contingency fails, TOUGH LUCK!=Contingency|You grind your teeth in pain as you realize how hurt you actually are.=Mountain Heart|Your ties with life's blood fades.=Life Blood|You feel weaker.=Strength|Your thorns wither to death and drop to your feet.=Armor Of Thorns|Your vision returns!=Blindness|Water begins to flow from your shoulders, it's springtime!=Immolation Cold|You shiver slightly as your body system slows down.=Regenerate|God is no longer with you and your holy aura fades away.=Holy Aura|You return to your original form.=Shadow Form|The world suddenly starts spinning.=Haste|The last drop of venom drips off of=Venom|You feel better as your magical field dissolves.=Ritual Of Pain|You let out a soft sigh as the space time continuum returns to normal.=Mana Shield|You become visible again.=Improved Invisibility|You see a shining set of armor materialize in the air before you, then it suddenly dissolves.=Armor|Your sun shield wears off.=Sun Shield|Your shadow enshrouds you!=Deathshadow|You stop using the Warhammer of Justice.=Bless|You seem a little less faithful.=Gods Blessing|You stop blurring!=Blur|You feel better. Your vision returns!=Blindness|Hmmm... Seems like sulphur don't burn too long :(=Immolation Fire|The cloak of blindness around  you dissolves=Blindness|You feel somewhat better.=Critical Wounds|A warm feeling runs through your body.=Poison|You feel much weaker.=Giant Size|The white aura around your body fades.=Sanctuary|You stretch out for your shadow...=Shadow Displacement|You once again feel naked.=Barkskin|You feel yourself exposed.=Improved Invisibility|You can no longer sense your invisible sphere of turning.=Bladeturn|You feel somewhat better as=Critical Wounds|Your shadow hums innocently as it pretends to protect you!=Deathshadow|asdfiozxcvoiuzkhwefkbj=Serenity|You feel less spiritual.=Prayer</value>
+      <json>{"Your magical forcefield dissolves as the effort to maintain it becomes too much.":"Blood Mirror","You relax a bit.":"Combat","The detect invisible wears off.":"Detect Invisibility","Your holy suit of armor dissolves.":"Holy Armor","You feel less righteous.":"Bless","The wings on your back shrink into nothingness.":"Fly","Your deadly concentration breaks.":"Adrenal Focus","You feel less protected.":"Armor","The spirits of the past return to their alternate existence along with your magical protection.":"Spirit Armor","Your surroundings start to change!":"Contingency","Your aura of despair dissolves.":"Aura Of Despair","Your ability to see in the dark is no more.":"Darkvision","You now feel all of your opponents blows.":"Force Field","Finally you feel that your health is restored!":"Blood Rite","You feel less protected from all the horrible things in the world.":"Protection","asdofdiuzxv":"Invisibility","Your kaleidoscopic mirage collapses in on itself as the magics expire.":"Mirror Image","Your contingency fails, TOUGH LUCK!":"Contingency","You grind your teeth in pain as you realize how hurt you actually are.":"Mountain Heart","Your ties with life's blood fades.":"Life Blood","You feel weaker.":"Strength","Your thorns wither to death and drop to your feet.":"Armor Of Thorns","Your vision returns!":"Blindness","Water begins to flow from your shoulders, it's springtime!":"Immolation Cold","You shiver slightly as your body system slows down.":"Regenerate","God is no longer with you and your holy aura fades away.":"Holy Aura","You return to your original form.":"Shadow Form","The world suddenly starts spinning.":"Haste","The last drop of venom drips off of":"Venom","You feel better as your magical field dissolves.":"Ritual Of Pain","You let out a soft sigh as the space time continuum returns to normal.":"Mana Shield","You become visible again.":"Improved Invisibility","You see a shining set of armor materialize in the air before you, then it suddenly dissolves.":"Armor","Your sun shield wears off.":"Sun Shield","Your shadow enshrouds you!":"Deathshadow","You stop using the Warhammer of Justice.":"Bless","You seem a little less faithful.":"Gods Blessing","You stop blurring!":"Blur","You feel better. Your vision returns!":"Blindness","Hmmm... Seems like sulphur don't burn too long :(":"Immolation Fire","The cloak of blindness around  you dissolves":"Blindness","You feel somewhat better.":"Critical Wounds","A warm feeling runs through your body.":"Poison","You feel much weaker.":"Giant Size","The white aura around your body fades.":"Sanctuary","You stretch out for your shadow...":"Shadow Displacement","You once again feel naked.":"Barkskin","You feel yourself exposed.":"Improved Invisibility","You can no longer sense your invisible sphere of turning.":"Bladeturn","You feel somewhat better as":"Critical Wounds","Your shadow hums innocently as it pretends to protect you!":"Deathshadow","asdfiozxcvoiuzkhwefkbj":"Serenity","You feel less spiritual.":"Prayer"}</json>
     </var>
     <alias name="getcc">
       <value>$priest=""
@@ -243,16 +243,17 @@ dmade=0
     </alias>
     <var name="dmade">1</var>
     <alias name="wimpout">
-      <value>#IF @norecall {#IF @currenttank=@charname {flee} {#IF @leading {} {retreat;%reversedir(@lastgroupdir)}}} {
-  justrecalled=1
-  #IF @nomagic {quaff escape;get escape @weaponcontainer} {
-    #IF @ispriest&gt;0 {cast 'word of recall'} {
-      #IF @isnightblade+@ismagician+@iswarlock&gt;0 {cast 'teleport without error'} {
-        get escape @weaponcontainer;quaff escape
-        }
-      }
-    }
-  }</value>
+      <value>;#IF @norecall {#IF @currenttank=@charname {flee} {#IF @leading {} {retreat;%reversedir(@lastgroupdir)}}} {
+;  justrecalled=1
+;  #IF @nomagic {quaff escape;get escape @weaponcontainer} {
+;    #IF @ispriest&gt;0 {cast 'word of recall'} {
+;      #IF @isnightblade+@ismagician+@iswarlock&gt;0 {cast 'teleport without error'} {
+;        get escape @weaponcontainer;quaff escape
+;        }
+;      }
+;    }
+;  }
+flee</value>
     </alias>
     <var name="primarystab" type="Literal"/>
     <var name="lowmanaspell" type="Literal"/>
@@ -265,8 +266,8 @@ dmade=0
       <value>fighting=0</value>
     </trigger>
     <var name="currentdam">
-      <value>cast 'judgement'</value>
-      <json>cast 'judgement'</json>
+      <value>cast 'sun arrow'</value>
+      <json>cast 'sun arrow'</json>
     </var>
     <var name="afight">1</var>
     <var name="aheal">0</var>
@@ -296,6 +297,8 @@ lowcharremaininghp=1092384</value>
 #IF (%2=Pr and %3=Pr and %1>50) {#ADDITEM priestlist %4}
 #IF (%2=Pr and %3=Pr and %1>50) {#ADDKEY priestmanadb %4 %6}
 #IF (%2=Pr xor %3=Pr and %1>50) {#ADDITEM halfpriestlist %4}
+#IF (%2=Ma or %3=Ma and %1>50) {#ADDITEM magicianlist %4}
+#IF (%2=Nb or %3=Nb and %1>50) {#ADDITEM nightbladelist %4}
 #IF (%2=An and %3=An) {#ADDITEM animistlist %4}
 #IF (@rescuescanning>0 and !%ismember(%4, @norescuelist)) {
   #IF @rescuescanning=1 {#IF (%ismember(%3, Ma|Pr|Wl|An) and !%ismember(%2, Fi|Te)) {#ADDITEM rescuelist %4}}
@@ -378,9 +381,9 @@ healact=""
     </var>
     <var name="lowcharremaininghp">1092384</var>
     <var name="lowcharname" type="Literal"/>
-    <var name="gpownum">183</var>
-    <var name="healact">cast 'burst of life' Tesla</var>
-    <var name="mainheal" type="Literal"/>
+    <var name="gpownum">0</var>
+    <var name="healact" type="Literal"/>
+    <var name="mainheal" type="Literal">cast 'burst of life'</var>
     <var name="assistmoblist" type="StringList">
       <value>A great soulcrusher stands here.|The soulcrusher glances at you with fear.|A blurred figure stands here.|A lesser lich of the Sarakeshian order glares at you with its empty eyes.|A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.</value>
       <json>["A great soulcrusher stands here.","The soulcrusher glances at you with fear.","A blurred figure stands here.","A lesser lich of the Sarakeshian order glares at you with its empty eyes.","A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets."]</json>
@@ -390,8 +393,8 @@ healact=""
     </trigger>
     <var name="lowmanaskill" type="Literal"/>
     <var name="commandmessages" type="StringList">
-      <value>Let's do nothing, nothing at all!|You lost your concentration!|Who should the spell be cast upon?|You grab|Headbang who?|You try to grab|and leaves a burn mark big as a fist.|SPLAM! Bulls eye, the ice bolt hit|Small sparks run up and down|Sorry, it ain't happening yet.|You solemnly chant to the mighty healing gods.|You enshroud|You are enshrouded in your own vampiric mists!|You utter a single arcane word of pain.|You quickly focus your energy on a blow.|Your thoughts and body become as one!|You call forth the flames of HELL!|You call forth raw elemental energy.|You call forth swirling elemental energy.|You focus your will.|makes a strange sound as you place|You suddenly swell to gigantic proportions and utter a WORD to smite your foes!|You cant seem to do that here!|You bring up black fire from hell to engulf all monsters!|head with your bony DANISH head!|You can't summon enough energy to cast the spell.|You can't do anything while in the clutches of The neo-otyugh.|You call upon your gods to pass judgement.|The wimp isn't here|You draw a sharp blade across|and you nearly cut your own finger!|Kinda hard right now while|You make a handful of seeds glow fiery red and hurl them at|You make a blistering beam of light strike from the sky.|You can't do this sitting!|makes a strange sound but is suddenly very silent as you place|You can't seem to sneak around the back of your target!|Backstab who?|You struggle to break free from The cloaker's grasp but fail.|Nah... You feel too relaxed to do that...|Ok.|Maybe you should get on your feet first?|You quickly circle the area, drawing a circle of protection.|You jumble the words as you attempt to cast.|Nobody here by that name.|Impossible!  You can't concentrate enough!|You summon upon powers to cast a true heal.|You chant loudly for the well being of your group.|You call upon higher beings for a miracle.|Nobody here by that name.|You chant for the well-being of your group.|You start to charge with the life energy of the earth, air and nearby organisms.|You evoke great powers and call upon a meteor!|Fry em!|Ice em!|You pummel|You fail your pummel|Maybe you should be fighting before you pummel?|You whirl your|You make scorching beams of light lance down from the sky.|You chant for transformation.|Your water bolt hit|You can't act, as Lloth has ceased the flow of time!|You unleash a spiralling volley of ice bolts.|You hurl a ferocious barrage of fire bolts.|You frantically flail your arms in the air, trying to impersonate a whirlwind...|You spank|makes a strange sound as you place|No way! You are fighting for your life!</value>
-      <json>["Let's do nothing, nothing at all!","You lost your concentration!","Who should the spell be cast upon?","You grab","Headbang who?","You try to grab","and leaves a burn mark big as a fist.","SPLAM! Bulls eye, the ice bolt hit","Small sparks run up and down","Sorry, it ain't happening yet.","You solemnly chant to the mighty healing gods.","You enshroud","You are enshrouded in your own vampiric mists!","You utter a single arcane word of pain.","You quickly focus your energy on a blow.","Your thoughts and body become as one!","You call forth the flames of HELL!","You call forth raw elemental energy.","You call forth swirling elemental energy.","You focus your will.","makes a strange sound as you place","You suddenly swell to gigantic proportions and utter a WORD to smite your foes!","You cant seem to do that here!","You bring up black fire from hell to engulf all monsters!","head with your bony DANISH head!","You can't summon enough energy to cast the spell.","You can't do anything while in the clutches of The neo-otyugh.","You call upon your gods to pass judgement.","The wimp isn't here","You draw a sharp blade across","and you nearly cut your own finger!","Kinda hard right now while","You make a handful of seeds glow fiery red and hurl them at","You make a blistering beam of light strike from the sky.","You can't do this sitting!","makes a strange sound but is suddenly very silent as you place","You can't seem to sneak around the back of your target!","Backstab who?","You struggle to break free from The cloaker's grasp but fail.","Nah... You feel too relaxed to do that...","Ok.","Maybe you should get on your feet first?","You quickly circle the area, drawing a circle of protection.","You jumble the words as you attempt to cast.","Nobody here by that name.","Impossible!  You can't concentrate enough!","You summon upon powers to cast a true heal.","You chant loudly for the well being of your group.","You call upon higher beings for a miracle.","Nobody here by that name.","You chant for the well-being of your group.","You start to charge with the life energy of the earth, air and nearby organisms.","You evoke great powers and call upon a meteor!","Fry em!","Ice em!","You pummel","You fail your pummel","Maybe you should be fighting before you pummel?","You whirl your","You make scorching beams of light lance down from the sky.","You chant for transformation.","Your water bolt hit","You can't act, as Lloth has ceased the flow of time!","You unleash a spiralling volley of ice bolts.","You hurl a ferocious barrage of fire bolts.","You frantically flail your arms in the air, trying to impersonate a whirlwind...","You spank","makes a strange sound as you place","No way! You are fighting for your life!"]</json>
+      <value>Let's do nothing, nothing at all!|You lost your concentration!|Who should the spell be cast upon?|You grab|Headbang who?|You try to grab|and leaves a burn mark big as a fist.|SPLAM! Bulls eye, the ice bolt hit|Small sparks run up and down|Sorry, it ain't happening yet.|You solemnly chant to the mighty healing gods.|You enshroud|You are enshrouded in your own vampiric mists!|You utter a single arcane word of pain.|You quickly focus your energy on a blow.|Your thoughts and body become as one!|You call forth the flames of HELL!|You call forth raw elemental energy.|You call forth swirling elemental energy.|You focus your will.|makes a strange sound as you place|You suddenly swell to gigantic proportions and utter a WORD to smite your foes!|You cant seem to do that here!|You bring up black fire from hell to engulf all monsters!|head with your bony DANISH head!|You can't summon enough energy to cast the spell.|You can't do anything while in the clutches of The neo-otyugh.|You call upon your gods to pass judgement.|The wimp isn't here|You draw a sharp blade across|and you nearly cut your own finger!|Kinda hard right now while|You make a handful of seeds glow fiery red and hurl them at|You make a blistering beam of light strike from the sky.|You can't do this sitting!|makes a strange sound but is suddenly very silent as you place|You can't seem to sneak around the back of your target!|Backstab who?|You struggle to break free from The cloaker's grasp but fail.|Nah... You feel too relaxed to do that...|Ok.|Maybe you should get on your feet first?|You quickly circle the area, drawing a circle of protection.|You jumble the words as you attempt to cast.|Nobody here by that name.|Impossible!  You can't concentrate enough!|You summon upon powers to cast a true heal.|You chant loudly for the well being of your group.|You call upon higher beings for a miracle.|Nobody here by that name.|You chant for the well-being of your group.|You start to charge with the life energy of the earth, air and nearby organisms.|You evoke great powers and call upon a meteor!|Fry em!|Ice em!|You pummel|You fail your pummel|Maybe you should be fighting before you pummel?|You whirl your|You make scorching beams of light lance down from the sky.|You chant for transformation.|Your water bolt hit|You can't act, as Lloth has ceased the flow of time!|You unleash a spiralling volley of ice bolts.|You hurl a ferocious barrage of fire bolts.|You frantically flail your arms in the air, trying to impersonate a whirlwind...|You spank|makes a strange sound as you place|No way! You are fighting for your life!|You pray to the healing gods.</value>
+      <json>["Let's do nothing, nothing at all!","You lost your concentration!","Who should the spell be cast upon?","You grab","Headbang who?","You try to grab","and leaves a burn mark big as a fist.","SPLAM! Bulls eye, the ice bolt hit","Small sparks run up and down","Sorry, it ain't happening yet.","You solemnly chant to the mighty healing gods.","You enshroud","You are enshrouded in your own vampiric mists!","You utter a single arcane word of pain.","You quickly focus your energy on a blow.","Your thoughts and body become as one!","You call forth the flames of HELL!","You call forth raw elemental energy.","You call forth swirling elemental energy.","You focus your will.","makes a strange sound as you place","You suddenly swell to gigantic proportions and utter a WORD to smite your foes!","You cant seem to do that here!","You bring up black fire from hell to engulf all monsters!","head with your bony DANISH head!","You can't summon enough energy to cast the spell.","You can't do anything while in the clutches of The neo-otyugh.","You call upon your gods to pass judgement.","The wimp isn't here","You draw a sharp blade across","and you nearly cut your own finger!","Kinda hard right now while","You make a handful of seeds glow fiery red and hurl them at","You make a blistering beam of light strike from the sky.","You can't do this sitting!","makes a strange sound but is suddenly very silent as you place","You can't seem to sneak around the back of your target!","Backstab who?","You struggle to break free from The cloaker's grasp but fail.","Nah... You feel too relaxed to do that...","Ok.","Maybe you should get on your feet first?","You quickly circle the area, drawing a circle of protection.","You jumble the words as you attempt to cast.","Nobody here by that name.","Impossible!  You can't concentrate enough!","You summon upon powers to cast a true heal.","You chant loudly for the well being of your group.","You call upon higher beings for a miracle.","Nobody here by that name.","You chant for the well-being of your group.","You start to charge with the life energy of the earth, air and nearby organisms.","You evoke great powers and call upon a meteor!","Fry em!","Ice em!","You pummel","You fail your pummel","Maybe you should be fighting before you pummel?","You whirl your","You make scorching beams of light lance down from the sky.","You chant for transformation.","Your water bolt hit","You can't act, as Lloth has ceased the flow of time!","You unleash a spiralling volley of ice bolts.","You hurl a ferocious barrage of fire bolts.","You frantically flail your arms in the air, trying to impersonate a whirlwind...","You spank","makes a strange sound as you place","No way! You are fighting for your life!","You pray to the healing gods."]</json>
     </var>
     <trigger priority="7000" trigontrig="false">
       <pattern>({@commandmessages})</pattern>
@@ -532,7 +535,6 @@ currenttank=@charname</value>
       <pattern>You can't act, as Lloth has ceased the flow of time!</pattern>
       <value>groupcheckpending=0</value>
     </trigger>
-    <var name="tofathighmana">1</var>
     <var name="adrenalpending">0</var>
     <var name="adrenalmessages">Your thoughts and body become as one!|You continue your concentration.|You lost your concentration!</var>
   </class>
@@ -553,18 +555,18 @@ tog play
     </trigger>
   </class>
   <class name="charactervalues">
-    <var name="charname">Miriam</var>
+    <var name="charname">Soren</var>
     <var name="charrace">K'ta'viir</var>
     <var name="ispriest">0</var>
-    <var name="istemplar">1</var>
-    <var name="ismagician">1</var>
+    <var name="istemplar">0</var>
+    <var name="ismagician">0</var>
     <var name="isnightblade">0</var>
-    <var name="isanimist">0</var>
+    <var name="isanimist">2</var>
     <var name="isrogue">0</var>
     <var name="isfighter">0</var>
     <var name="iswarlock">0</var>
-    <var name="charalignment">Good</var>
-    <var name="charlevel">87</var>
+    <var name="charalignment">Neutral</var>
+    <var name="charlevel">60</var>
     <trigger priority="170">
       <pattern>Character: (%w)%sRace: (%x)%sCreated: *$%sClass: (%w)/(%w)%sAlignment: (%w) *$%sLevel: (%n)%sExp: *$%sHits: %n~((%n)~)%s{Needed|Excess}: (%x)%sGold: (%x)*$%sMana: %n~((%n)~)%sQuestP: *$%sMove: %n~((%n)~)%s*</pattern>
       <value>charname=%1
@@ -601,9 +603,9 @@ iswarlock=0
 #IF %4="Te" {#add istemplar 1}
 </value>
     </trigger>
-    <var name="charmaxhp">3116</var>
-    <var name="charmaxmana">1542</var>
-    <var name="charmaxmove">646</var>
+    <var name="charmaxhp">2409</var>
+    <var name="charmaxmana">977</var>
+    <var name="charmaxmove">482</var>
     <trigger name="Elemental essence collected:$%sEarth:%s%n/%n%s~({| |  }(%n)~%~)" priority="210">
       <pattern>Elemental essence collected:$%sEarth:%s%n/%n%s~({| |  }(%n)~%~) Water:%s%n/%n%s~({| |  }(%n)~%~)$      Air:%s%n/%n%s~({| |  }(%n)~%~)  Fire:%s%n/%n%s~({| |  }(%n)~%~)</pattern>
       <value>essenceearth=%1
@@ -611,29 +613,29 @@ essencewater=%2
 essenceair=%3
 essencefire=%4</value>
     </trigger>
-    <var name="essenceearth">2</var>
-    <var name="essenceair">187</var>
-    <var name="essencefire">140</var>
+    <var name="essenceearth">82</var>
+    <var name="essenceair">174</var>
+    <var name="essencefire">162</var>
     <trigger name="Strength:  %n / %n      %n / %n%sDAMROLL: +(%n)$ Intelligence:" priority="260">
       <pattern>Strength:  %n / %n      %n / %n%sDAMROLL: +(%n)$ Intelligence:  %n%s%n%sHITROLL: +(%n)$       Wisdom:  %n%s%n%sTHAC0: (%p)(%n)$    Dexterity:  %n%s%n%sArmor-Class: *</pattern>
       <value>chardamroll=%1
 #IF %3="-" {charhitroll=(%2+%4)} {charhitroll=(%2-%4)}</value>
     </trigger>
-    <var name="chardamroll">49</var>
-    <var name="charhitroll">67</var>
+    <var name="chardamroll">39</var>
+    <var name="charhitroll">39</var>
     <var name="playing">
       <value>1</value>
       <default>0</default>
     </var>
-    <var name="essencewater">76</var>
-    <var name="currenthp">3116</var>
-    <var name="currentmana">1542</var>
-    <var name="currentmaxhp">3116</var>
-    <var name="currentmaxmana">1542</var>
-    <var name="currentmaxmoves">646</var>
-    <var name="currentmoves">646</var>
+    <var name="essencewater">120</var>
+    <var name="currenthp">2458</var>
+    <var name="currentmana">1024</var>
+    <var name="currentmaxhp">2458</var>
+    <var name="currentmaxmana">1024</var>
+    <var name="currentmaxmoves">482</var>
+    <var name="currentmoves">482</var>
     <var name="position">standing</var>
-    <var name="maxhp">3116</var>
+    <var name="maxhp">2458</var>
     <alias name="scriptinit">
       <value>score
 stats
@@ -666,14 +668,14 @@ autofightdecision</value>
       <pattern>You become humble again.</pattern>
       <value>berserk=0</value>
     </trigger>
-    <var name="quicknessval">1</var>
+    <var name="quicknessval">0</var>
     <var name="aboutitem">
       <value>wyrmking</value>
       <json>wyrmking</json>
     </var>
     <var name="feetitem">boots</var>
     <var name="shielditem">
-      <value>shield</value>
+      <value>sphere</value>
       <json>sphere</json>
     </var>
     <var name="aboutlist" type="Record">
@@ -697,7 +699,7 @@ autofightdecision</value>
       <value>wing</value>
       <json>wing</json>
     </var>
-    <var name="chargold">72576943</var>
+    <var name="chargold">19137563</var>
     <var name="aura">aura of Regeneration</var>
     <class name="eqscan" enabled="false">
       <trigger priority="6790">
@@ -731,16 +733,16 @@ autofightdecision</value>
   <class name="damtypes">
     <var name="damtype">pure</var>
     <var name="damspells" type="Record">
-      <value>electricity|conserve|fire=cast 'hell fire'|normal=cast 'powerword pain'|stun=cast 'powerword pain'|pure=cast 'judgement'</value>
-      <json>{"electricity":"","normal":"cast 'powerword pain'","conserve":"","stun":"cast 'powerword pain'","pure":"cast 'judgement'","fire":"cast 'hell fire'"}</json>
+      <value>unlife=cast 'sticks to snakes'|light=cast 'sun arrow'|electricity|normal=cast 'sun arrow'|conserve|fire=cast 'fire seeds'|dark=cast 'sticks to snakes'</value>
+      <json>{"unlife":"cast 'sticks to snakes'","light":"cast 'sun arrow'","electricity":"","normal":"cast 'sun arrow'","conserve":"","fire":"cast 'fire seeds'","dark":"cast 'sticks to snakes'"}</json>
     </var>
     <var name="currentweapon">
       <value>justice</value>
       <json>justice</json>
     </var>
     <var name="weaponlist" type="Record" sorted="1">
-      <value>'Frostbite', the sword of Winter=frostbite|a bright-blue mace 'Icestorm'=icestorm|a cold-iron scimitar=scimitar|a copper hammer=copper|a dagger of wind=winddagger|a dark-red blade 'Firestorm'=firestorm|a dragon tailed whip=tailed|a fifteen thronged whip=fifteen|a fire-headed mace=headed|a fishing rod=fishing|a flaming blade of darkness=flamingbladedarkness|a flowing blue longsword=flowing|a forked lightning trident=forked|a ghostly spear=ghostly|a gigantic maul from ancient times=gigantic|a gleaming white sword=gleaming|a hammer made from the tail of a red dragon=fashioned|a honed shortsword 'Zedraikis'=zedraikis|a horgarian fleshspine=fleshspine|a huge black demonsword called 'Zcobori'=zcobori|a jagged spear=jagged|a misty transparent leash=leash|a pilfered parang=parang|a razor sharp silver lance=lance|a runic spear=runic|a sharp iron hatchet=hatchet|a shortsword named 'Windweaver'=windweaver|a Skaven Fang=skaven|a slither of lightning=slither|a snake shaped hammer=snake|a tendril of darkness=tendril|a wicked flaming bastard sword named Flametongue=flametongue|an infernal soulblade=infernal|Azimers razor talon=azimer|Claws of Darkness=claws|Gorm's dragon slayer=gorm|Nemesis, the blade of shadows=nemesis|PathWeaver DeathFlame=deathflame|PathWeaver HailStrike=hailstrike|PathWeavers blade=origshift|Poseidon's trident=poseidon|the "Claw of Penetration"=penetration|the Arcane Hammer of Magic=arcane|the Athame=athame|the avalanche=avalanche|the dagger of souls=souls|the dreaded Thorn club=dreaded|the King's sword=king|the mace 'Deathbringer'=deathbringer|the obsidian spear named "Gungner"=gungner|the Onyx dagger named 'Chakara the souldrainer'=chakara|the royal ice dagger=royal|the Runeblade 'Lawbringer'=lawbringer|the Skean-dhu=skean|the soul reaper=reaper|the spear of the seas=seas|the tail of a black dragon=blackdragontail|the Warhammer of Justice=justice|Wolf headed battle staff=wolf</value>
-      <json>{"'Frostbite', the sword of Winter":"frostbite","a bright-blue mace 'Icestorm'":"icestorm","a cold-iron scimitar":"scimitar","a copper hammer":"copper","a dagger of wind":"winddagger","a dark-red blade 'Firestorm'":"firestorm","a dragon tailed whip":"tailed","a fifteen thronged whip":"fifteen","a fire-headed mace":"headed","a fishing rod":"fishing","a flaming blade of darkness":"flamingbladedarkness","a flowing blue longsword":"flowing","a forked lightning trident":"forked","a ghostly spear":"ghostly","a gigantic maul from ancient times":"gigantic","a gleaming white sword":"gleaming","a hammer made from the tail of a red dragon":"fashioned","a honed shortsword 'Zedraikis'":"zedraikis","a horgarian fleshspine":"fleshspine","a huge black demonsword called 'Zcobori'":"zcobori","a jagged spear":"jagged","a misty transparent leash":"leash","a pilfered parang":"parang","a razor sharp silver lance":"lance","a runic spear":"runic","a sharp iron hatchet":"hatchet","a shortsword named 'Windweaver'":"windweaver","a Skaven Fang":"skaven","a slither of lightning":"slither","a snake shaped hammer":"snake","a tendril of darkness":"tendril","a wicked flaming bastard sword named Flametongue":"flametongue","an infernal soulblade":"infernal","Azimers razor talon":"azimer","Claws of Darkness":"claws","Gorm's dragon slayer":"gorm","Nemesis, the blade of shadows":"nemesis","PathWeaver DeathFlame":"deathflame","PathWeaver HailStrike":"hailstrike","PathWeavers blade":"origshift","Poseidon's trident":"poseidon","the \"Claw of Penetration\"":"penetration","the Arcane Hammer of Magic":"arcane","the Athame":"athame","the avalanche":"avalanche","the dagger of souls":"souls","the dreaded Thorn club":"dreaded","the King's sword":"king","the mace 'Deathbringer'":"deathbringer","the obsidian spear named \"Gungner\"":"gungner","the Onyx dagger named 'Chakara the souldrainer'":"chakara","the royal ice dagger":"royal","the Runeblade 'Lawbringer'":"lawbringer","the Skean-dhu":"skean","the soul reaper":"reaper","the spear of the seas":"seas","the tail of a black dragon":"blackdragontail","the Warhammer of Justice":"justice","Wolf headed battle staff":"wolf"}</json>
+      <value>'Frostbite', the sword of Winter=frostbite|a bright-blue mace 'Icestorm'=icestorm|a cold-iron scimitar=scimitar|a copper hammer=copper|a dagger of wind=winddagger|a dark-red blade 'Firestorm'=firestorm|a dragon tailed whip=tailed|a fifteen thronged whip=fifteen|a fire-headed mace=headed|a fishing rod=fishing|a flaming blade of darkness=flamingbladedarkness|a flowing blue longsword=flowing|a forked lightning trident=forked|a ghostly spear=ghostly|a gigantic maul from ancient times=gigantic|a gleaming white sword=gleaming|a hammer made from the tail of a red dragon=fashioned|a honed shortsword 'Zedraikis'=zedraikis|a horgarian fleshspine=fleshspine|a huge black demonsword called 'Zcobori'=zcobori|a jagged spear=jagged|a misty transparent leash=leash|a pilfered parang=parang|a razor sharp silver lance=lance|a runic spear=runic|a sharp iron hatchet=hatchet|a shortsword named 'Windweaver'=windweaver|a Skaven Fang=skaven|a slither of lightning=slither|a snake shaped hammer=snake|a tendril of darkness=tendril|a wicked flaming bastard sword named Flametongue=flametongue|an infernal soulblade=infernal|Azimers razor talon=azimer|Claws of Darkness=claws|Gorm's dragon slayer=gorm|Nemesis, the blade of shadows=nemesis|PathWeaver DeathFlame=deathflame|PathWeaver HailStrike=hailstrike|PathWeavers blade=origshift|Poseidon's trident=poseidon|the "Claw of Penetration"=penetration|the Arcane Hammer of Magic=arcane|the Athame=athame|the avalanche=avalanche|the dagger of souls=souls|the dreaded Thorn club=dreaded|the King's sword=king|the mace 'Deathbringer'=deathbringer|the obsidian spear named "Gungner"=gungner|the Onyx dagger named 'Chakara the souldrainer'=chakara|the royal ice dagger=royal|the Runeblade 'Lawbringer'=lawbringer|the Skean-dhu=skean|the soul reaper=reaper|the spear of the seas=seas|the tail of a black dragon=blackdragontail|the Warhammer of Justice=justice|Wolf headed battle staff=wolf|Wyrmsbane=wyrmsbane</value>
+      <json>{"'Frostbite', the sword of Winter":"frostbite","a bright-blue mace 'Icestorm'":"icestorm","a cold-iron scimitar":"scimitar","a copper hammer":"copper","a dagger of wind":"winddagger","a dark-red blade 'Firestorm'":"firestorm","a dragon tailed whip":"tailed","a fifteen thronged whip":"fifteen","a fire-headed mace":"headed","a fishing rod":"fishing","a flaming blade of darkness":"flamingbladedarkness","a flowing blue longsword":"flowing","a forked lightning trident":"forked","a ghostly spear":"ghostly","a gigantic maul from ancient times":"gigantic","a gleaming white sword":"gleaming","a hammer made from the tail of a red dragon":"fashioned","a honed shortsword 'Zedraikis'":"zedraikis","a horgarian fleshspine":"fleshspine","a huge black demonsword called 'Zcobori'":"zcobori","a jagged spear":"jagged","a misty transparent leash":"leash","a pilfered parang":"parang","a razor sharp silver lance":"lance","a runic spear":"runic","a sharp iron hatchet":"hatchet","a shortsword named 'Windweaver'":"windweaver","a Skaven Fang":"skaven","a slither of lightning":"slither","a snake shaped hammer":"snake","a tendril of darkness":"tendril","a wicked flaming bastard sword named Flametongue":"flametongue","an infernal soulblade":"infernal","Azimers razor talon":"azimer","Claws of Darkness":"claws","Gorm's dragon slayer":"gorm","Nemesis, the blade of shadows":"nemesis","PathWeaver DeathFlame":"deathflame","PathWeaver HailStrike":"hailstrike","PathWeavers blade":"origshift","Poseidon's trident":"poseidon","the \"Claw of Penetration\"":"penetration","the Arcane Hammer of Magic":"arcane","the Athame":"athame","the avalanche":"avalanche","the dagger of souls":"souls","the dreaded Thorn club":"dreaded","the King's sword":"king","the mace 'Deathbringer'":"deathbringer","the obsidian spear named \"Gungner\"":"gungner","the Onyx dagger named 'Chakara the souldrainer'":"chakara","the royal ice dagger":"royal","the Runeblade 'Lawbringer'":"lawbringer","the Skean-dhu":"skean","the soul reaper":"reaper","the spear of the seas":"seas","the tail of a black dragon":"blackdragontail","the Warhammer of Justice":"justice","Wolf headed battle staff":"wolf","Wyrmsbane":"wyrmsbane"}</json>
     </var>
     <alias name="use">
       <value>#IF %1="slay" {newdamtype=%2} {newdamtype=%1}
@@ -772,8 +774,8 @@ weaponswap @weaponlist.@determinedweapon
       <value>currentweapon=@weaponlist.%1</value>
     </trigger>
     <var name="damweapons" type="StringList">
-      <value>the "Claw of Penetration"|PathWeaver HailStrike|a gigantic maul from ancient times|the Warhammer of Justice|a honed shortsword 'Zedraikis'|the Runeblade 'Lawbringer'|a dragon tailed whip|an infernal soulblade|a Skaven Fang|the King's sword|a horgarian fleshspine|a razor sharp silver lance|the Arcane Hammer of Magic|a forked lightning trident|the spear of the seas|a pilfered parang</value>
-      <json>["the \"Claw of Penetration\"","PathWeaver HailStrike","a gigantic maul from ancient times","the Warhammer of Justice","a honed shortsword 'Zedraikis'","the Runeblade 'Lawbringer'","a dragon tailed whip","an infernal soulblade","a Skaven Fang","the King's sword","a horgarian fleshspine","a razor sharp silver lance","the Arcane Hammer of Magic","a forked lightning trident","the spear of the seas","a pilfered parang"]</json>
+      <value>a copper hammer|the Warhammer of Justice|a sharp iron hatchet|a ghostly sword</value>
+      <json>["a copper hammer","the Warhammer of Justice","a sharp iron hatchet","a ghostly sword"]</json>
     </var>
     <alias name="weaponswap">
       <value>#IF (%null(%1) or %1=@currentweapon) {} {
@@ -898,8 +900,8 @@ quickdraw=0
     </alias>
     <var name="determinedweapon">the Warhammer of Justice</var>
     <var name="masterweaponlist" type="Record">
-      <value>elemental='Frostbite', the sword of Winter|ice="asdovzixcvj|'Frostbite', the sword of Winter|a bright-blue mace 'Icestorm'|PathWeaver HailStrike|the royal ice dagger"|gas|elf|air=a dagger of wind|plain=a fifteen thronged whip|mythical=a gigantic maul from ancient times|superlarge|silver=a razor sharp silver lance|lugroki="the Warhammer of Justice|a pilfered parang|a sharp iron hatchet"|unlife="the dagger of souls|a huge black demonsword called 'Zcobori'|an infernal soulblade|Claws of Darkness|a pilfered parang"|undead=the soul reaper|horgar="a fire-headed mace|a wicked flaming bastard sword named Flametongue"|energy="the Arcane Hammer of Magic|a ghostly spear|PathWeavers blade"|light=the Warhammer of Justice|large|mental="the dreaded Thorn club|the King's sword"|electricity="a forked lightning trident|a slither of lightning"|dragon="Gorm's dragon slayer|a hammer made from the tail of a red dragon|a dragon tailed whip|Azimers razor talon"|normal="a dark-red blade 'Firestorm'|a fishing rod|the Onyx dagger named 'Chakara the souldrainer'|the ""Claw of Penetration""|the Skean-dhu|a fifteen thronged whip|a jagged spear|a copper hammer|a pilfered parang|a sharp iron hatchet"|human="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'"|water="the spear of the seas|a flowing blue longsword|Poseidon's trident"|magical=the soul reaper|giant=the sword of Halo'ki|poison=a horgarian fleshspine|earth=the avalanche|wood|stun|pure="the Warhammer of Justice|Wolf headed battle staff|a pilfered parang|a sharp iron hatchet"|mana=athame|iron="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'|a pilfered parang|a sharp iron hatchet"|fire="a dark-red blade 'Firestorm'|a flaming blade of darkness|a honed shortsword 'Zedraikis'|PathWeaver DeathFlame|a fire-headed mace|a wicked flaming bastard sword named Flametongue"|drow=PathWeaver HailStrike|dark="a flaming blade of darkness|a Skaven Fang|a tendril of darkness|Nemesis, the blade of shadows"|acid="Gorm's dragon slayer|the tail of a black dragon|a horgarian fleshspine"|bleed</value>
-      <json>{"elemental":"'Frostbite', the sword of Winter","ice":["asdovzixcvj","'Frostbite', the sword of Winter","a bright-blue mace 'Icestorm'","PathWeaver HailStrike","the royal ice dagger"],"gas":"","elf":"","air":"a dagger of wind","plain":"a fifteen thronged whip","mythical":"a gigantic maul from ancient times","superlarge":"","silver":"a razor sharp silver lance","lugroki":["the Warhammer of Justice","a pilfered parang","a sharp iron hatchet"],"unlife":["the dagger of souls","a huge black demonsword called 'Zcobori'","an infernal soulblade","Claws of Darkness","a pilfered parang"],"undead":"the soul reaper","horgar":["a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"energy":["the Arcane Hammer of Magic","a ghostly spear","PathWeavers blade"],"light":"the Warhammer of Justice","large":"","mental":["the dreaded Thorn club","the King's sword"],"electricity":["a forked lightning trident","a slither of lightning"],"dragon":["Gorm's dragon slayer","a hammer made from the tail of a red dragon","a dragon tailed whip","Azimers razor talon"],"normal":["a dark-red blade 'Firestorm'","a fishing rod","the Onyx dagger named 'Chakara the souldrainer'","the \"Claw of Penetration\"","the Skean-dhu","a fifteen thronged whip","a jagged spear","a copper hammer","a pilfered parang","a sharp iron hatchet"],"human":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'"],"water":["the spear of the seas","a flowing blue longsword","Poseidon's trident"],"magical":"the soul reaper","giant":"the sword of Halo'ki","poison":"a horgarian fleshspine","earth":"the avalanche","wood":"","stun":"","pure":["the Warhammer of Justice","Wolf headed battle staff","a pilfered parang","a sharp iron hatchet"],"mana":"athame","iron":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'","a pilfered parang","a sharp iron hatchet"],"fire":["a dark-red blade 'Firestorm'","a flaming blade of darkness","a honed shortsword 'Zedraikis'","PathWeaver DeathFlame","a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"drow":"PathWeaver HailStrike","dark":["a flaming blade of darkness","a Skaven Fang","a tendril of darkness","Nemesis, the blade of shadows"],"acid":["Gorm's dragon slayer","the tail of a black dragon","a horgarian fleshspine"],"bleed":""}</json>
+      <value>elemental='Frostbite', the sword of Winter|ice="asdovzixcvj|'Frostbite', the sword of Winter|a bright-blue mace 'Icestorm'|PathWeaver HailStrike|the royal ice dagger"|gas|elf|air=a dagger of wind|plain=a fifteen thronged whip|mythical=a gigantic maul from ancient times|superlarge|silver=a razor sharp silver lance|lugroki="the Warhammer of Justice|a pilfered parang|a sharp iron hatchet"|unlife="the dagger of souls|a huge black demonsword called 'Zcobori'|an infernal soulblade|Claws of Darkness|a pilfered parang"|undead=the soul reaper|horgar="a fire-headed mace|a wicked flaming bastard sword named Flametongue"|energy="the Arcane Hammer of Magic|a ghostly spear|PathWeavers blade"|light=the Warhammer of Justice|large|mental="the dreaded Thorn club|the King's sword"|electricity="a forked lightning trident|a slither of lightning"|dragon="Wyrmsbane|Gorm's dragon slayer|a hammer made from the tail of a red dragon|a dragon tailed whip|Azimers razor talon"|normal="a dark-red blade 'Firestorm'|a fishing rod|the Onyx dagger named 'Chakara the souldrainer'|the ""Claw of Penetration""|the Skean-dhu|a fifteen thronged whip|a jagged spear|a copper hammer|a pilfered parang|a sharp iron hatchet"|human="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'"|water="the spear of the seas|a flowing blue longsword|Poseidon's trident"|magical=the soul reaper|giant=the sword of Halo'ki|poison=a horgarian fleshspine|earth=the avalanche|wood|stun|pure="the Warhammer of Justice|Wolf headed battle staff|a pilfered parang|a sharp iron hatchet"|mana=athame|iron="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'|a pilfered parang|a sharp iron hatchet"|fire="a dark-red blade 'Firestorm'|a flaming blade of darkness|a honed shortsword 'Zedraikis'|PathWeaver DeathFlame|a fire-headed mace|a wicked flaming bastard sword named Flametongue"|drow=PathWeaver HailStrike|dark="a flaming blade of darkness|a Skaven Fang|a tendril of darkness|Nemesis, the blade of shadows"|acid="Gorm's dragon slayer|the tail of a black dragon|a horgarian fleshspine"|bleed</value>
+      <json>{"elemental":"'Frostbite', the sword of Winter","ice":["asdovzixcvj","'Frostbite', the sword of Winter","a bright-blue mace 'Icestorm'","PathWeaver HailStrike","the royal ice dagger"],"gas":"","elf":"","air":"a dagger of wind","plain":"a fifteen thronged whip","mythical":"a gigantic maul from ancient times","superlarge":"","silver":"a razor sharp silver lance","lugroki":["the Warhammer of Justice","a pilfered parang","a sharp iron hatchet"],"unlife":["the dagger of souls","a huge black demonsword called 'Zcobori'","an infernal soulblade","Claws of Darkness","a pilfered parang"],"undead":"the soul reaper","horgar":["a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"energy":["the Arcane Hammer of Magic","a ghostly spear","PathWeavers blade"],"light":"the Warhammer of Justice","large":"","mental":["the dreaded Thorn club","the King's sword"],"electricity":["a forked lightning trident","a slither of lightning"],"dragon":["Wyrmsbane","Gorm's dragon slayer","a hammer made from the tail of a red dragon","a dragon tailed whip","Azimers razor talon"],"normal":["a dark-red blade 'Firestorm'","a fishing rod","the Onyx dagger named 'Chakara the souldrainer'","the \"Claw of Penetration\"","the Skean-dhu","a fifteen thronged whip","a jagged spear","a copper hammer","a pilfered parang","a sharp iron hatchet"],"human":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'"],"water":["the spear of the seas","a flowing blue longsword","Poseidon's trident"],"magical":"the soul reaper","giant":"the sword of Halo'ki","poison":"a horgarian fleshspine","earth":"the avalanche","wood":"","stun":"","pure":["the Warhammer of Justice","Wolf headed battle staff","a pilfered parang","a sharp iron hatchet"],"mana":"athame","iron":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'","a pilfered parang","a sharp iron hatchet"],"fire":["a dark-red blade 'Firestorm'","a flaming blade of darkness","a honed shortsword 'Zedraikis'","PathWeaver DeathFlame","a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"drow":"PathWeaver HailStrike","dark":["a flaming blade of darkness","a Skaven Fang","a tendril of darkness","Nemesis, the blade of shadows"],"acid":["Gorm's dragon slayer","the tail of a black dragon","a horgarian fleshspine"],"bleed":""}</json>
     </var>
     <alias name="weaponbagscan">
       <value>damweapons=""
@@ -943,11 +945,11 @@ spelltype=normal
     </trigger>
     <var name="spellswaponhit">1</var>
     <var name="newdamtype">
-      <value>pure</value>
+      <value>unlife</value>
       <json>unlife</json>
     </var>
     <var name="spelltype">
-      <value>pure</value>
+      <value>light</value>
       <json>light</json>
     </var>
     <trigger priority="94250" regex="true">
@@ -964,8 +966,8 @@ spelltype=normal
     </trigger>
     <var name="selfeqscan">0</var>
     <var name="immuneorresfiremobs" type="StringList">
-      <value>The Storm Demon|A ghost of a decapitated woman|The Efreeti Sultan|The Terrorite Demon|The Eraditor|The Thonis|The Efreeti Pasha|The Major Eraditor|The soulcrusher|A captain of the Brettonian High Command|The mystical soulcrusher|A lieutenant of the Brettonian High Command|The Great Soulcrusher|The Lesser Eraditor|A Guard of Khron|Palladrus|The pyrohydra|An Elite Daedroth Guard|A Daedroth|A Grolim warrior priest|The Sword Demon</value>
-      <json>["The Storm Demon","A ghost of a decapitated woman","The Efreeti Sultan","The Terrorite Demon","The Eraditor","The Thonis","The Efreeti Pasha","The Major Eraditor","The soulcrusher","A captain of the Brettonian High Command","The mystical soulcrusher","A lieutenant of the Brettonian High Command","The Great Soulcrusher","The Lesser Eraditor","A Guard of Khron","Palladrus","The pyrohydra","An Elite Daedroth Guard","A Daedroth","A Grolim warrior priest","The Sword Demon"]</json>
+      <value>The Storm Demon|A ghost of a decapitated woman|The Efreeti Sultan|The Terrorite Demon|The Eraditor|The Thonis|The Efreeti Pasha|The Major Eraditor|The soulcrusher|A captain of the Brettonian High Command|The mystical soulcrusher|A lieutenant of the Brettonian High Command|The Great Soulcrusher|The Lesser Eraditor|A Guard of Khron|Palladrus|The pyrohydra|An Elite Daedroth Guard|A Daedroth|A Grolim warrior priest|The Sword Demon|Pheron the Archmage</value>
+      <json>["The Storm Demon","A ghost of a decapitated woman","The Efreeti Sultan","The Terrorite Demon","The Eraditor","The Thonis","The Efreeti Pasha","The Major Eraditor","The soulcrusher","A captain of the Brettonian High Command","The mystical soulcrusher","A lieutenant of the Brettonian High Command","The Great Soulcrusher","The Lesser Eraditor","A Guard of Khron","Palladrus","The pyrohydra","An Elite Daedroth Guard","A Daedroth","A Grolim warrior priest","The Sword Demon","Pheron the Archmage"]</json>
     </var>
     <var name="slaytypestospells" type="Record">
       <value>elemental|elf="dark|unlife"|mythical|lugroki="light|fire|pure"|undead|dragon|human|magical|drow="pure|ice|lugroki"|demon="pure|light"|snake</value>
@@ -977,8 +979,8 @@ spelltype=normal
 #BUTTON 1 @damweaponsshort</value>
     </alias>
     <var name="damweaponsshort" type="StringList">
-      <value>penetration|hailstrike|gigantic|justice|zedraikis|lawbringer|tailed|infernal|skaven|king|fleshspine|lance|arcane|forked|seas|parang</value>
-      <json>["penetration","hailstrike","gigantic","justice","zedraikis","lawbringer","tailed","infernal","skaven","king","fleshspine","lance","arcane","forked","seas","parang"]</json>
+      <value>copper|justice|hatchet</value>
+      <json>["copper","justice","hatchet"]</json>
     </var>
     <trigger priority="5960" trigontrig="false">
       <pattern>^(*)ASDFSADF ({|~(invisible~)}){| }({|~(venom~)}){| }({|~(humming~)})$</pattern>
@@ -1024,8 +1026,8 @@ spelltype=normal
   #IF @damswaponroom {#IF !%null(@damswaprooms.%1) {use @damswaprooms.%1}}
   }</value>
     </trigger>
-    <var name="roomname">The Fountain Square of Karandras</var>
-    <var name="exits">North|East|South|West</var>
+    <var name="roomname">Temple street</var>
+    <var name="exits">North|East|South</var>
     <var name="waterrooms">A Wide Pool|A Narrow Underground Stream|A Deep Eddy|An Underground Lake</var>
     <var name="wildmagicrooms" type="StringList">
       <value>A Magical Waterfall|In the Essence Flows</value>
@@ -1033,7 +1035,7 @@ spelltype=normal
     </var>
     <var name="wildmagic">0</var>
     <var name="waterroom">0</var>
-    <var name="leading">1</var>
+    <var name="leading">0</var>
     <trigger name="({You sit down and rest your tired bones.|You stop resting, and" priority="2450">
       <pattern>({You sit down and rest your tired bones.|You stop resting, and stand up.|You go to sleep.|You wake, and stand up.|You sit down.|You stand up.})</pattern>
       <value>#IF %1="You sit down and rest your tired bones." {position=resting}
@@ -1110,7 +1112,7 @@ weaponbagscan
 gag all get remove
 gag all spell set</value>
     </alias>
-    <var name="version">DS v1.36</var>
+    <var name="version">DS v1.37</var>
     <trigger priority="23620">
       <pattern>You can't seem to do that here!</pattern>
       <value>nomagic=1</value>
@@ -1118,7 +1120,7 @@ gag all spell set</value>
     <var name="justrecalled">0</var>
   </class>
   <class name="group">
-    <var name="leader" type="Literal"/>
+    <var name="leader">Soren</var>
     <trigger priority="1640">
       <pattern>^(%w) issues the order 'recall'</pattern>
       <value>#IF (%1=@leader or %1="someone") {recallorder}</value>
@@ -1172,7 +1174,10 @@ use slay %1</value>
   #IF %ismember(%2, off|down) {aff remove "holy aura";#IF %ismember("Holy Aura", @affectslist) {cast 'holy aura' off}}
   }
 #IF (%1="peek" and @isrogue=2) {peek %2;awaitingpeekinfo=1;peekchannel="gtf ,"}
-#IF (%1="enter") {enter %2;#IF %2="tipi" {sleep}}
+#IF (%1="enter") {
+  #IF (%2="field" and @iswuss) {} {enter %2}
+  #IF %2="tipi" {sleep}
+}
 #IF (%1="drink" and %2="well") {drink well}
 #IF (%1="leave") {wake;leave}
 #IF (%1=%lower(@charname) and %2="wake") {#IF @position="sleeping" {wake} {#IF @position=("resting" or "sitting") {stand}}}
@@ -1193,7 +1198,7 @@ use slay %1</value>
   retreatdir=%2
   }]]></value>
     </trigger>
-    <var name="loot">1</var>
+    <var name="loot">0</var>
     <var name="butcher">0</var>
     <trigger priority="2060">
       <pattern>^(%w) tells you 'exp'</pattern>
@@ -1405,8 +1410,8 @@ temporarilyleading=0</value>
     </trigger>
     <class name="grouplist">
       <var name="grouplist" type="StringList">
-        <value>Miriam|Internets|Ride|Toruk|Redrum|Tesla|Prosten|Twov|Hannibal|Indecision|Tyrell|Akira|Granite|Tema|Xingling|Sirius|Fina|Pest|Eitha|Cd|Scorpio|Arkoth|Enter|Skyr|Greenknight|Zeed|Shroom|Xyron|Kraftwerk|Hurricane|Mystic|Rhoads|Nym|Ultrahero|Olorin|River|Coore</value>
-        <json>["Miriam","Internets","Ride","Toruk","Redrum","Tesla","Prosten","Twov","Hannibal","Indecision","Tyrell","Akira","Granite","Tema","Xingling","Sirius","Fina","Pest","Eitha","Cd","Scorpio","Arkoth","Enter","Skyr","Greenknight","Zeed","Shroom","Xyron","Kraftwerk","Hurricane","Mystic","Rhoads","Nym","Ultrahero","Olorin","River","Coore"]</json>
+        <value>Istarion|Nym|Soren|Oka|Stauf|Otto|Gloom|Overkill|Darthvader|Skinhead|Ultrahero|Coore|Skyth|Zaver|Vixen|Kraftwerk|Granite|Akira|Schmu|Pazuzu</value>
+        <json>["Istarion","Nym","Soren","Oka","Stauf","Otto","Gloom","Overkill","Darthvader","Skinhead","Ultrahero","Coore","Skyth","Zaver","Vixen","Kraftwerk","Granite","Akira","Schmu","Pazuzu"]</json>
       </var>
       <trigger priority="96910">
         <pattern>Your group consists of:</pattern>
@@ -1416,7 +1421,9 @@ halfpriestlist=""
 grouplevellist=""
 priestmanadb=""
 notheres=""
-animistlist=""</value>
+animistlist=""
+magicianlist=""
+nightbladelist=""</value>
       </trigger>
       <trigger priority="96920">
         <pattern>^(%w) is now a member of @leader's group.</pattern>
@@ -1427,27 +1434,26 @@ animistlist=""</value>
         <value>#ADDITEM grouplist %1</value>
       </trigger>
       <var name="priestlist" type="StringList">
-        <value>Prosten|Akira|Cd|Ultrahero|River|Coore</value>
-        <json>["Prosten","Akira","Cd","Ultrahero","River","Coore"]</json>
+        <value>Ultrahero|Coore|Akira</value>
+        <json>["Ultrahero","Coore","Akira"]</json>
       </var>
-      <var name="halfpriestlist" type="StringList">
-        <value>Scorpio|Zeed|Shroom</value>
-        <json>["Scorpio","Zeed","Shroom"]</json>
-      </var>
+      <var name="halfpriestlist" type="StringList"/>
       <trigger priority="4740">
         <pattern>~[(%n)%s(%w)~/(%w)~]%s(%w)%s~[{| |  }(%n)~%H%s(%n)~%M%s%n~%V~] NotHere</pattern>
-        <value>#ADDITEM grouplist %4
+        <value><![CDATA[#ADDITEM grouplist %4
 #ADDKEY grouplevellist %4 %1
 #ADDITEM notheres %4
-#IF (%2=Pr and %3=Pr and %1&gt;50) {#ADDITEM priestlist %4}
-#IF (%2=Pr and %3=Pr and %1&gt;50) {#ADDKEY priestmanadb %4 %6}
-#IF (%2=Pr xor %3=Pr and %1&gt;50) {#ADDITEM halfpriestlist %4}
+#IF (%2=Pr and %3=Pr and %1>50) {#ADDITEM priestlist %4}
+#IF (%2=Pr and %3=Pr and %1>50) {#ADDKEY priestmanadb %4 %6}
+#IF (%2=Pr xor %3=Pr and %1>50) {#ADDITEM halfpriestlist %4}
+#IF (%2=Ma or %3=Ma and %1>50) {#ADDITEM magicianlist %4}
+#IF (%2=Nb or %3=Nb and %1>50) {#ADDITEM nightbladelist %4}
 #IF (%2=An and %3=An) {#ADDITEM animistlist %4}
-#IF (@rescuescanning&gt;0 and !%ismember(%4, @norescuelist)) {
+#IF (@rescuescanning>0 and !%ismember(%4, @norescuelist)) {
   #IF @rescuescanning=1 {#IF (%ismember(%3, Ma|Pr|Wl|An) and !%ismember(%2, Fi|Te)) {rescueadd %4}}
   #IF @rescuescanning=2 {#IF (!%ismember(%3, Fi|Te)) {rescueadd %4}}
   #IF @rescuescanning=3 {rescueadd %4}
-}</value>
+}]]></value>
       </trigger>
       <var name="rescuescanning">0</var>
       <alias name="rescuescan">
@@ -1469,12 +1475,12 @@ arescuetype=None
         <value>#DELITEM rescuelist %1</value>
       </alias>
       <var name="grouplevellist" type="Record">
-        <value>Miriam=87|Internets=63|Ride=70|Toruk=63|Redrum=52|Tesla=68|Prosten=87|Twov=91|Hannibal=72|Indecision=73|Tyrell=69|Akira=69|Granite=64|Tema=78|Xingling=70|Sirius=66|Fina=53|Pest=65|Eitha=68|Cd=95|Scorpio=66|Arkoth=65|Enter=91|Skyr=69|Greenknight=100|Zeed=66|Shroom=85|Xyron=77|Kraftwerk=94|Hurricane=71|Mystic=65|Rhoads=78|Nym=76|Ultrahero=87|Olorin=84|River=70|Coore=86</value>
-        <json>{"Ultrahero":87,"Akira":69,"Nym":76,"Mystic":65,"Miriam":87,"Sirius":66,"Shroom":85,"Olorin":84,"Granite":64,"Arkoth":65,"Hannibal":72,"Kraftwerk":94,"Internets":63,"Xyron":77,"Indecision":73,"Rhoads":78,"Cd":95,"Greenknight":100,"Enter":91,"Eitha":68,"Redrum":52,"Scorpio":66,"Hurricane":71,"Toruk":63,"Tesla":68,"Zeed":66,"Twov":91,"Tema":78,"Skyr":69,"Ride":70,"Pest":65,"Fina":53,"Tyrell":69,"Prosten":87,"Coore":86,"River":70,"Xingling":70}</json>
+        <value>Ultrahero=92|Akira=74|Istarion=65|Oka=89|Nym=79|Skinhead=70|Granite=67|Kraftwerk=98|Zaver=61|Overkill=88|Gloom=53|Pazuzu=59|Vixen=70|Otto=67|Stauf=65|Soren=60|Skyth=68|Darthvader=55|Schmu=72|Coore=87</value>
+        <json>{"Ultrahero":92,"Akira":74,"Istarion":65,"Oka":89,"Nym":79,"Skinhead":70,"Granite":67,"Kraftwerk":98,"Zaver":61,"Overkill":88,"Gloom":53,"Pazuzu":59,"Vixen":70,"Otto":67,"Stauf":65,"Soren":60,"Skyth":68,"Darthvader":55,"Schmu":72,"Coore":87}</json>
       </var>
       <var name="priestmanadb" type="Record">
-        <value>Prosten=99|Akira=100|Cd=97|Ultrahero=95|River=100|Coore=78</value>
-        <json>{"Ultrahero":95,"Akira":100,"Cd":97,"Prosten":99,"Coore":78,"River":100}</json>
+        <value>Ultrahero=100|Akira=25|Coore=100</value>
+        <json>{"Ultrahero":100,"Akira":25,"Coore":100}</json>
       </var>
       <var name="setpriestchar">Bucket</var>
       <var name="notheres" type="Literal"/>
@@ -1498,8 +1504,8 @@ $index = 1
 #alarm +3 {sumnotheres}</value>
       </alias>
       <var name="animistlist" type="StringList">
-        <value>Granite|Fina|Kraftwerk</value>
-        <json>["Granite","Fina","Kraftwerk"]</json>
+        <value>Soren|Kraftwerk|Granite</value>
+        <json>["Soren","Kraftwerk","Granite"]</json>
       </var>
       <alias name="setpriestshelper">
         <value>$avgmana = 0;
@@ -1558,8 +1564,26 @@ $index = 1
   #IF $index&gt;%numitems($summoners) {$index=1}
   }</value>
       </alias>
+      <var name="magicianlist" type="StringList">
+        <value>Nym|Oka|Stauf|Gloom|Darthvader|Skyth|Vixen</value>
+        <json>["Nym","Oka","Stauf","Gloom","Darthvader","Skyth","Vixen"]</json>
+      </var>
+      <var name="nightbladelist" type="StringList">
+        <value>Zaver|Pazuzu</value>
+        <json>["Zaver","Pazuzu"]</json>
+      </var>
+      <alias name="ddnh">
+        <value>;tell mages and nightblades that aren't here to dd or merge.
+#FO @notheres {
+  #IF %ismember(%i, @magicianlist) {t %i dd} {
+  #IF %ismember(%i, @nightbladelist) {t %i merge}}
+}</value>
+      </alias>
     </class>
-    <var name="blindlist" type="Literal"/>
+    <var name="blindlist" type="StringList">
+      <value>Turia|Fastball</value>
+      <json>["Turia","Fastball"]</json>
+    </var>
     <trigger priority="96950">
       <pattern>^(%w) {is blind.|seems to be blinded.}</pattern>
       <value>#IF %ismember(%1, @grouplist) {#additem blindlist %1}
@@ -1762,7 +1786,7 @@ grouplist=""
 halfpriestlist=""
 priestlist=""</value>
     </trigger>
-    <var name="solo">1</var>
+    <var name="solo">0</var>
     <trigger priority="94380">
       <pattern>^%w tells the group, '(%w) (%w)'</pattern>
       <value><![CDATA[#IF (%1="rescue") {
@@ -1836,12 +1860,10 @@ totaldamagers=0</value>
         </trigger>
       </class>
       <var name="dsd" type="Record">
-        <json>{}</json>
+        <value>Ultrahero=1|Insane=2519|Dreadlock=2851|Zog=2268|Oka=1886|Fan=2341|Viltaire=306|Musty=0|Mommy=2073|Shroom=1858|Tamara=1985|Zaver=73|Ethernet=4022|Staley=1016|Wulfgard=1128|Xyron=1445|Indecision=1147|Cd=1|Greenknight=2749|Flame=2812|Saibot=530|Littletree=15|Werzerker=1|Kolrath=104|Enter=2070|Hurricane=1745|Fastball=1647|Tesla=2148|Zeed=7|Yaki=623|Twov=1668|Skyr=439|Pest=1704|Orca=3290|Mule=557|Halo=1|Belial=1425|Smaug=1481|Coore=2|Chico=392|Yoggin=2|River=0</value>
+        <json>{"Ultrahero":1,"Insane":2519,"Dreadlock":2851,"Zog":2268,"Oka":1886,"Fan":2341,"Viltaire":306,"Musty":0,"Mommy":2073,"Shroom":1858,"Tamara":1985,"Zaver":73,"Ethernet":4022,"Staley":1016,"Wulfgard":1128,"Xyron":1445,"Indecision":1147,"Cd":1,"Greenknight":2749,"Flame":2812,"Saibot":530,"Littletree":15,"Werzerker":1,"Kolrath":104,"Enter":2070,"Hurricane":1745,"Fastball":1647,"Tesla":2148,"Zeed":7,"Yaki":623,"Twov":1668,"Skyr":439,"Pest":1704,"Orca":3290,"Mule":557,"Halo":1,"Belial":1425,"Smaug":1481,"Coore":2,"Chico":392,"Yoggin":2,"River":0}</json>
       </var>
-      <var name="dsdsorted" type="Record">
-        <value>Hannibal=9495|Tesla=9336|Greenknight=9186|Enter=9074|Miriam=8974|Kraftwerk=8944|Tema=8742|Olorin=8538|Rhoads=8354|Nym=7959|Tyrell=7611|Hurricane=7583|Twov=7491|Pest=6418|Xyron=6338|Xingling=6235|Mystic=6037|Granite=5943|Ride=5795|Skyr=5381|Arkoth=4472|Sirius=4212|Toruk=4048|Indecision=3673|Redrum=3339|Internets=3319|Shroom=1103|Fina=124|Zeed=2|Coore=2|Prosten=0|Cd=0|Fyllo=0|Ultrahero=0|Akira=0|River=0</value>
-        <json>{"Ultrahero":0,"Akira":0,"Nym":7959,"Mystic":6037,"Miriam":8974,"Sirius":4212,"Shroom":1103,"Olorin":8538,"Granite":5943,"Arkoth":4472,"Hannibal":9495,"Kraftwerk":8944,"Internets":3319,"Xyron":6338,"Indecision":3673,"Rhoads":8354,"Cd":0,"Greenknight":9186,"Fyllo":0,"Enter":9074,"Redrum":3339,"Hurricane":7583,"Toruk":4048,"Tesla":9336,"Zeed":2,"Twov":7491,"Tema":8742,"Skyr":5381,"Ride":5795,"Pest":6418,"Fina":124,"Tyrell":7611,"Prosten":0,"Coore":2,"River":0,"Xingling":6235}</json>
-      </var>
+      <var name="dsdsorted" type="Literal"/>
       <alias name="dspalias">
         <value>#SAY @totaldamagers
 #WHILE %numkeys(@dsd)&gt;0 {
@@ -1919,7 +1941,7 @@ dsrequested=0
 ;gt DamAvg &+G1. &+R~<3 %dbkeys(@dsdsorted).1~(&+r@dsdsorted.1&+R~) ~<3 &+G2. &+c%dbkeys(@dsdsorted).2~(&+C@dsdsorted.2&+c~) 3. %dbkeys(@dsdsorted).3 ~(@dsdsorted.3~) 4. %dbkeys(@dsdsorted).4 ~(@dsdsorted.4~) 5. %dbkeys(@dsdsorted).5 ~(@dsdsorted.5~)
 ;gt DamAvg 6. %dbkeys(@dsdsorted).6 ~(@dsdsorted.6~) 7. %dbkeys(@dsdsorted).7 ~(@dsdsorted.7~) 8. %dbkeys(@dsdsorted).8 ~(@dsdsorted.8~) 9. %dbkeys(@dsdsorted).9 ~(@dsdsorted.9~) 10. %dbkeys(@dsdsorted).10 ~(@dsdsorted.10~)]]></value>
       </alias>
-      <var name="dsoutput"><![CDATA[gt DamAvg &+G1. &+R<3 &+MHannibal&n&+R(&+r9495&+R) <3 &+G2. &+cTesla(&+C9336&+c) &+G3. &+cGreenknight(&+C9186&+c) &+G4. &+cEnter(&+C9074&+c) &+G5. &+cMiriam(&+C8974&+c)|gt DamAvg &+G6. &+cKraftwerk(&+C8944&+c) &+G7. &+cTema(&+C8742&+c) &+G8. &+cOlorin(&+C8538&+c) &+G9. &+cRhoads(&+C8354&+c) &+G10. &+cNym(&+C7959&+c)]]></var>
+      <var name="dsoutput"><![CDATA[gt DamAvg &+G1. &+R<3 &+MEthernet&n&+R(&+r4637&+R) <3]]></var>
       <trigger priority="166140">
         <pattern>%w tells the group, 'top(%n)'</pattern>
         <value>#IF @showlogsongt {damscan %1}</value>
@@ -1934,10 +1956,10 @@ dsscantype=DamAvg
 #IF !%null(%1) {dsrequested=%1}
 #IF %2="eff" {dsscantype=DamEfficiency}</value>
       </alias>
-      <var name="totalavg">177600</var>
+      <var name="totalavg">50988</var>
       <var name="totaldamagers">27</var>
       <var name="dsscantype">DamAvg</var>
-      <var name="totaleff">2363</var>
+      <var name="totaleff">587</var>
       <trigger priority="166140">
         <pattern>%w tells the group, 'eff(%n)'</pattern>
         <value>#IF @showlogsongt {damscan %1 eff}</value>
@@ -2141,7 +2163,11 @@ eat grape</value>
 
 1.36:
   - Add walk south after recall
-  - add Sword Demon to immuneorresfiremobs</var>
+  - add Sword Demon to immuneorresfiremobs
+
+1.37:
+  - Added ddnh alias, tell all magician and nightblade who are not here to dd or merge (ma/nb will be told dd, not both). Operates off the last group list seen.
+  - Added @iswuss variable, if @iswuss = 1, will not enter field when leader gt's enter field</var>
     <class name="autobuy">
       <trigger priority="7100">
         <pattern>^{Sheila|The secretary} says 'Sorry @charname, you don't have the (%n) gold coins that we would have to charge for that corpse retrieval!'</pattern>
@@ -2204,17 +2230,17 @@ donate corpse</value>
     <macro key="CTRL-KEY7">
       <value>#IF @isrogue=2 {peek up} {tell @peeker peek up}</value>
     </macro>
-    <var name="peeker">Warriik</var>
+    <var name="peeker">nude</var>
   </class>
   <class name="preferencevariables">
     <var name="whitelist" type="StringList">
       <value>Ghodris|Wind|Orca|Totici|Entropy|Mommy|Daddy|Brutus|Tiberius|Tembo|Dylma</value>
       <json>["Ghodris","Wind","Orca","Totici","Entropy","Mommy","Daddy","Brutus","Tiberius","Tembo","Dylma"]</json>
     </var>
-    <var name="lowmana">250</var>
+    <var name="lowmana">100</var>
     <var name="weaponcontainer">void</var>
     <var name="misccontainer"/>
-    <var name="wimplevel">1090.6</var>
+    <var name="wimplevel">843.15</var>
     <var name="quickdraw">0</var>
     <var name="damswaponroom">1</var>
     <var name="acop">
@@ -2232,6 +2258,8 @@ donate corpse</value>
     <var name="defaultlowmana">100</var>
     <var name="showlogsongt">1</var>
     <var name="superwhitelist">Danimal|Dreadlock</var>
+    <var name="tofathighmana">1</var>
+    <var name="iswuss">0</var>
   </class>
   <class name="pulsedetection">
     <trigger priority="1120">
@@ -2247,7 +2275,7 @@ assistpending=0
 ;#say %1, @onhitdamtypes.%1, @currentdam
 #IF @spellswaponhit {#IF !%null(@onhitdamtypes.%1) {spellswitch @onhitdamtypes.%1}}</value>
     </trigger>
-    <var name="currenttarget">The great Demon King</var>
+    <var name="currenttarget">A Polar Bear</var>
     <var name="intrapulse">0</var>
     <trigger priority="1150">
       <pattern>^(*) {misses|hits|massacres|obliterates|annihilates|vaporizes|pulverizes|atomizes|ultraslays|~*~*~*ULTRASLAYS~*~*~*} (*){ to small fragments|} with {his|her|its}{ deadly|} %w.</pattern>
@@ -2365,7 +2393,7 @@ fighting=1</value>
       <pattern>{Whom do you wish to assist?|No way! You are fighting for your life!}</pattern>
       <value>assistpending=0</value>
     </trigger>
-    <var name="currenttank"/>
+    <var name="currenttank">Soren</var>
     <trigger priority="12720">
       <pattern>You are rescued by *, you are confused!</pattern>
       <value>fighting=0</value>
@@ -2441,8 +2469,8 @@ autofightdecision</value>
 }</value>
     </trigger>
     <var name="moblist" type="StringList">
-      <value>A little scamp is hanging around here causing mischief.|A little scamp is hanging around here causing mischief.</value>
-      <json>["A little scamp is hanging around here causing mischief.","A little scamp is hanging around here causing mischief."]</json>
+      <value>A high guard wanders here, looking for signs of trouble.|A weary traveller rests here, taking a break from his journey.</value>
+      <json>["A high guard wanders here, looking for signs of trouble.","A weary traveller rests here, taking a break from his journey."]</json>
     </var>
     <var name="agglist" type="Literal"/>
     <var name="assistlist" type="Literal"/>
@@ -2562,6 +2590,7 @@ drink fount</value>
     <path name="udshop">.5s14enend3n2wendws2esenwwnenwnneessedswwswneseene3s2ed2wsess</path>
     <path name="wyrmtonc">2wd2n7es6enen2ene5nwne3ne2ne</path>
     <path name="cove">n3endn5eue2sd3ene2nen3eneds</path>
+    <path name="graven">12s3e2nene2nennen2e3ne2n</path>
   </class>
   <class name="spellbot">
     <trigger priority="6150">
@@ -2618,7 +2647,7 @@ spellbottarget=%1
 #IF (%2="report") {report}
 ;#IF @spellbotsent=0 {#IF @fighting {t %1 Sorry, Fighting} {t %1 Sorry, probably can't cast that spell, or my script sucks.}]]></value>
     </alias>
-    <var name="spellbottarget">Star</var>
+    <var name="spellbottarget">Mask</var>
   </class>
   <class name="tells">
     <trigger priority="10">
@@ -2692,7 +2721,7 @@ spellbottarget=%1
     </trigger>
   </class>
   <class name="well">
-    <var name="lastgroupdir">south</var>
+    <var name="lastgroupdir">west</var>
     <trigger priority="3310">
       <pattern>A stalactite dislodges from the ceiling and plummets to the ground, narrowly$missing you. You fall over backwards from the shock.</pattern>
       <value>stand
@@ -2764,14 +2793,14 @@ windcoming=0</value>
       <value>balrogexits=@exits
 #alarm +1 {}</value>
     </trigger>
-    <var name="balrogexits">North|South</var>
+    <var name="balrogexits">North|East|West</var>
     <trigger priority="2860">
       <pattern>%w has summoned you!</pattern>
       <value>summonedsinceslip=1</value>
     </trigger>
     <var name="summonedsinceslip">1</var>
     <var name="ahealslipped">0</var>
-    <var name="afightslipped">0</var>
+    <var name="afightslipped">1</var>
     <var name="slipdir">east</var>
     <alias name="butch">
       <value>#IF %null(%1) {butcher corpse;butcher 2.corpse;butcher 3.corpse} {#loop 1,%1 {butcher %{i}.corpse}}</value>
@@ -2819,7 +2848,7 @@ stand
         <caption>Assist: ON</caption>
       </button>
     </button>
-    <class name="healbutton" enabled="false">
+    <class name="healbutton">
       <button name="heal" type="Toggle" variable="aheal" autosize="false" width="68" height="23" iconleft="false" color="gray" priority="117236">
         <caption>Heals: OFF</caption>
         <button>
@@ -2827,7 +2856,7 @@ stand
         </button>
       </button>
     </class>
-    <class name="rescuebutton">
+    <class name="rescuebutton" enabled="false">
       <button name="rescue" type="Toggle" variable="arescue" autosize="false" width="70" height="23" iconleft="false" color="gray" priority="117412">
         <caption>Rescue: OFF</caption>
         <button>
@@ -2835,7 +2864,7 @@ stand
         </button>
       </button>
     </class>
-    <class name="copbuttons">
+    <class name="copbuttons" enabled="false">
       <button name="cop" type="Toggle" variable="acop" iconleft="false" color="gray" priority="117333">
         <caption>Acop: OFF</caption>
         <button>
@@ -3020,11 +3049,9 @@ loot=0</value>
   </loc>
   <tab name="danimal"/>
   <tab name="grou"/>
-  <var name="combatpulses">313200</var>
-  <path name="graven">12s3e2nene2nennen2e3ne2n</path>
-  <var name="askregen">0</var>
+  <var name="combatpulses">493</var>
 </window>
-<window name="tell" commandline="false" statusbar="false" dockalign="Top" left="1051" top="289" width="441" height="1183" host="none">
+<window name="tell" commandline="false" statusbar="false" dockalign="Top" left="1051" top="289" width="441" height="1237" host="none">
   <uid>{856C42AF-734A-4ED4-BE79-FE995F5B06AF}</uid>
   <dockuid>{601F6102-6F51-4839-B1E5-381D54467980}</dockuid>
   <packages>English Directions|English Keypad|Clickable URLs|unsavory|DSPublic</packages>
