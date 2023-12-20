@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <cmud>
-<window name="DSPublic" statusbar="false" left="438" top="120" width="1499" height="1237">
+<window name="DSPublic" statusbar="false" left="438" top="120" width="1204" height="994">
   <uid>{601F6102-6F51-4839-B1E5-381D54467980}</uid>
   <packages>English Directions|English Keypad|Clickable URLs|unsavory|DSPublic</packages>
   <tab name="score"/>
   <tab name="gua"/>
   <loc name="dan" color="blue">
-    <value>0</value>
+    <value>67</value>
   </loc>
   <class name="affectslist">
     <trigger priority="300">
@@ -20,8 +20,8 @@ affectslist.%1=-1</value>
 affectslist.%1=(%2*30*24+%3*30+%4/2)</value>
     </trigger>
     <var name="affectslist" type="Record" sorted="1">
-      <value>Contingency=-1|Darkvision=-1</value>
-      <json>{"Contingency":-1,"Darkvision":-1}</json>
+      <value>Armor=710|Blur=711|Contingency=-1|Darkvision=-1|Fly=709|Protection=712|Sanctuary=-1</value>
+      <json>{"Armor":710,"Blur":711,"Contingency":-1,"Darkvision":-1,"Fly":709,"Protection":712,"Sanctuary":-1}</json>
     </var>
     <trigger priority="730">
       <pattern>------ Affecting Spells ------</pattern>
@@ -73,8 +73,8 @@ aff group]]></value>
     </trigger>
     <var name="tempvar">Sanctuary</var>
     <var name="affectstokeep" type="StringList">
-      <value>Barkskin|Armor Of Thorns</value>
-      <json>["Barkskin","Armor Of Thorns"]</json>
+      <value>Haste|Blood Mirror|Prayer|Regenerate|Contingency</value>
+      <json>["Haste","Blood Mirror","Prayer","Regenerate","Contingency"]</json>
     </var>
     <alias name="determineaffectstokeep">
       <value><![CDATA[affectstokeep=""
@@ -175,8 +175,8 @@ aff group]]></value>
   #IF (@getregen and %null(@affectslist.Regenerate)) {ask @askregenchar regen}
 }</value>
     </alias>
-    <var name="askregenchar">Akira</var>
-    <var name="getregen">1</var>
+    <var name="askregenchar">Halo</var>
+    <var name="getregen">0</var>
     <alias name="immo">
       <value>#IF @leading {gt immo %1}
 #IF (@iswarlock&gt;0) {
@@ -243,17 +243,16 @@ dmade=0
     </alias>
     <var name="dmade">1</var>
     <alias name="wimpout">
-      <value>;#IF @norecall {#IF @currenttank=@charname {flee} {#IF @leading {} {retreat;%reversedir(@lastgroupdir)}}} {
-;  justrecalled=1
-;  #IF @nomagic {quaff escape;get escape @weaponcontainer} {
-;    #IF @ispriest&gt;0 {cast 'word of recall'} {
-;      #IF @isnightblade+@ismagician+@iswarlock&gt;0 {cast 'teleport without error'} {
-;        get escape @weaponcontainer;quaff escape
-;        }
-;      }
-;    }
-;  }
-flee</value>
+      <value>#IF @norecall {#IF @currenttank=@charname {flee} {#IF @leading {} {retreat;%reversedir(@lastgroupdir)}}} {
+  justrecalled=1
+  #IF @nomagic {quaff escape;get escape @weaponcontainer} {
+    #IF @ispriest&gt;0 {cast 'word of recall'} {
+      #IF @isnightblade+@ismagician+@iswarlock&gt;0 {cast 'teleport without error'} {
+        quaff escape;get escape @weaponcontainer
+        }
+      }
+    }
+  }</value>
     </alias>
     <var name="primarystab" type="Literal"/>
     <var name="lowmanaspell" type="Literal"/>
@@ -266,8 +265,8 @@ flee</value>
       <value>fighting=0</value>
     </trigger>
     <var name="currentdam">
-      <value>cast 'sun arrow'</value>
-      <json>cast 'sun arrow'</json>
+      <value>cast 'fire seeds'</value>
+      <json>cast 'fire seeds'</json>
     </var>
     <var name="afight">1</var>
     <var name="aheal">0</var>
@@ -279,8 +278,8 @@ lowcharname=""
 lowcharremaininghp=100000
 gpownum=0</value>
     </alias>
-    <var name="ghp">80</var>
-    <var name="thp">70</var>
+    <var name="ghp">65</var>
+    <var name="thp">65</var>
     <var name="mhp">-10</var>
     <var name="gphp">70</var>
     <var name="gphpn">3</var>
@@ -381,9 +380,9 @@ healact=""
     </var>
     <var name="lowcharremaininghp">1092384</var>
     <var name="lowcharname" type="Literal"/>
-    <var name="gpownum">0</var>
+    <var name="gpownum">33</var>
     <var name="healact" type="Literal"/>
-    <var name="mainheal" type="Literal">cast 'burst of life'</var>
+    <var name="mainheal" type="Literal">cast 'powerheal'</var>
     <var name="assistmoblist" type="StringList">
       <value>A great soulcrusher stands here.|The soulcrusher glances at you with fear.|A blurred figure stands here.|A lesser lich of the Sarakeshian order glares at you with its empty eyes.|A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.</value>
       <json>["A great soulcrusher stands here.","The soulcrusher glances at you with fear.","A blurred figure stands here.","A lesser lich of the Sarakeshian order glares at you with its empty eyes.","A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets."]</json>
@@ -437,7 +436,7 @@ healact=""
 #IF (@ismagician=1 and @isanimist=0) {
   #IF @spelltype="fire" {cast 'hell storm'}
   #IF @spelltype="electricity" {commandpending=0}
-  #IF !%ismember(@spelltype, fire|electricity) {cast 'mass pain'}
+  #IF !%ismember(@spelltype, fire|electricity) {dance}
   }
 #IF (@ismagician=0 and @isanimist&gt;0) {cast 'sun ray'}</value>
     </alias>
@@ -555,18 +554,18 @@ tog play
     </trigger>
   </class>
   <class name="charactervalues">
-    <var name="charname">Soren</var>
+    <var name="charname">Danimal</var>
     <var name="charrace">K'ta'viir</var>
-    <var name="ispriest">0</var>
+    <var name="ispriest">1</var>
     <var name="istemplar">0</var>
-    <var name="ismagician">0</var>
+    <var name="ismagician">1</var>
     <var name="isnightblade">0</var>
-    <var name="isanimist">2</var>
+    <var name="isanimist">0</var>
     <var name="isrogue">0</var>
     <var name="isfighter">0</var>
     <var name="iswarlock">0</var>
     <var name="charalignment">Neutral</var>
-    <var name="charlevel">60</var>
+    <var name="charlevel">100</var>
     <trigger priority="170">
       <pattern>Character: (%w)%sRace: (%x)%sCreated: *$%sClass: (%w)/(%w)%sAlignment: (%w) *$%sLevel: (%n)%sExp: *$%sHits: %n~((%n)~)%s{Needed|Excess}: (%x)%sGold: (%x)*$%sMana: %n~((%n)~)%sQuestP: *$%sMove: %n~((%n)~)%s*</pattern>
       <value>charname=%1
@@ -603,9 +602,9 @@ iswarlock=0
 #IF %4="Te" {#add istemplar 1}
 </value>
     </trigger>
-    <var name="charmaxhp">2409</var>
-    <var name="charmaxmana">977</var>
-    <var name="charmaxmove">482</var>
+    <var name="charmaxhp">2750</var>
+    <var name="charmaxmana">1486</var>
+    <var name="charmaxmove">843</var>
     <trigger name="Elemental essence collected:$%sEarth:%s%n/%n%s~({| |  }(%n)~%~)" priority="210">
       <pattern>Elemental essence collected:$%sEarth:%s%n/%n%s~({| |  }(%n)~%~) Water:%s%n/%n%s~({| |  }(%n)~%~)$      Air:%s%n/%n%s~({| |  }(%n)~%~)  Fire:%s%n/%n%s~({| |  }(%n)~%~)</pattern>
       <value>essenceearth=%1
@@ -613,29 +612,29 @@ essencewater=%2
 essenceair=%3
 essencefire=%4</value>
     </trigger>
-    <var name="essenceearth">82</var>
-    <var name="essenceair">174</var>
-    <var name="essencefire">162</var>
+    <var name="essenceearth">20</var>
+    <var name="essenceair">44</var>
+    <var name="essencefire">32</var>
     <trigger name="Strength:  %n / %n      %n / %n%sDAMROLL: +(%n)$ Intelligence:" priority="260">
       <pattern>Strength:  %n / %n      %n / %n%sDAMROLL: +(%n)$ Intelligence:  %n%s%n%sHITROLL: +(%n)$       Wisdom:  %n%s%n%sTHAC0: (%p)(%n)$    Dexterity:  %n%s%n%sArmor-Class: *</pattern>
       <value>chardamroll=%1
 #IF %3="-" {charhitroll=(%2+%4)} {charhitroll=(%2-%4)}</value>
     </trigger>
-    <var name="chardamroll">39</var>
-    <var name="charhitroll">39</var>
+    <var name="chardamroll">30</var>
+    <var name="charhitroll">36</var>
     <var name="playing">
       <value>1</value>
       <default>0</default>
     </var>
-    <var name="essencewater">120</var>
-    <var name="currenthp">2458</var>
-    <var name="currentmana">1024</var>
-    <var name="currentmaxhp">2458</var>
-    <var name="currentmaxmana">1024</var>
-    <var name="currentmaxmoves">482</var>
-    <var name="currentmoves">482</var>
+    <var name="essencewater">137</var>
+    <var name="currenthp">2750</var>
+    <var name="currentmana">1486</var>
+    <var name="currentmaxhp">2750</var>
+    <var name="currentmaxmana">1486</var>
+    <var name="currentmaxmoves">843</var>
+    <var name="currentmoves">843</var>
     <var name="position">standing</var>
-    <var name="maxhp">2458</var>
+    <var name="maxhp">2750</var>
     <alias name="scriptinit">
       <value>score
 stats
@@ -699,7 +698,7 @@ autofightdecision</value>
       <value>wing</value>
       <json>wing</json>
     </var>
-    <var name="chargold">19137563</var>
+    <var name="chargold">3352077</var>
     <var name="aura">aura of Regeneration</var>
     <class name="eqscan" enabled="false">
       <trigger priority="6790">
@@ -731,14 +730,14 @@ autofightdecision</value>
     </trigger>
   </class>
   <class name="damtypes">
-    <var name="damtype">pure</var>
+    <var name="damtype">mythical</var>
     <var name="damspells" type="Record">
-      <value>unlife=cast 'sticks to snakes'|light=cast 'sun arrow'|electricity|normal=cast 'sun arrow'|conserve|fire=cast 'fire seeds'|dark=cast 'sticks to snakes'</value>
-      <json>{"unlife":"cast 'sticks to snakes'","light":"cast 'sun arrow'","electricity":"","normal":"cast 'sun arrow'","conserve":"","fire":"cast 'fire seeds'","dark":"cast 'sticks to snakes'"}</json>
+      <value>electricity|normal=cast 'powerword pain'|conserve|stun=cast 'powerword pain'|fire=cast 'hell fire'</value>
+      <json>{"electricity":"","normal":"cast 'powerword pain'","conserve":"","stun":"cast 'powerword pain'","fire":"cast 'hell fire'"}</json>
     </var>
     <var name="currentweapon">
-      <value>justice</value>
-      <json>justice</json>
+      <value>deathbringer</value>
+      <json>deathbringer</json>
     </var>
     <var name="weaponlist" type="Record" sorted="1">
       <value>'Frostbite', the sword of Winter=frostbite|a bright-blue mace 'Icestorm'=icestorm|a cold-iron scimitar=scimitar|a copper hammer=copper|a dagger of wind=winddagger|a dark-red blade 'Firestorm'=firestorm|a dragon tailed whip=tailed|a fifteen thronged whip=fifteen|a fire-headed mace=headed|a fishing rod=fishing|a flaming blade of darkness=flamingbladedarkness|a flowing blue longsword=flowing|a forked lightning trident=forked|a ghostly spear=ghostly|a gigantic maul from ancient times=gigantic|a gleaming white sword=gleaming|a hammer made from the tail of a red dragon=fashioned|a honed shortsword 'Zedraikis'=zedraikis|a horgarian fleshspine=fleshspine|a huge black demonsword called 'Zcobori'=zcobori|a jagged spear=jagged|a misty transparent leash=leash|a pilfered parang=parang|a razor sharp silver lance=lance|a runic spear=runic|a sharp iron hatchet=hatchet|a shortsword named 'Windweaver'=windweaver|a Skaven Fang=skaven|a slither of lightning=slither|a snake shaped hammer=snake|a tendril of darkness=tendril|a wicked flaming bastard sword named Flametongue=flametongue|an infernal soulblade=infernal|Azimers razor talon=azimer|Claws of Darkness=claws|Gorm's dragon slayer=gorm|Nemesis, the blade of shadows=nemesis|PathWeaver DeathFlame=deathflame|PathWeaver HailStrike=hailstrike|PathWeavers blade=origshift|Poseidon's trident=poseidon|the "Claw of Penetration"=penetration|the Arcane Hammer of Magic=arcane|the Athame=athame|the avalanche=avalanche|the dagger of souls=souls|the dreaded Thorn club=dreaded|the King's sword=king|the mace 'Deathbringer'=deathbringer|the obsidian spear named "Gungner"=gungner|the Onyx dagger named 'Chakara the souldrainer'=chakara|the royal ice dagger=royal|the Runeblade 'Lawbringer'=lawbringer|the Skean-dhu=skean|the soul reaper=reaper|the spear of the seas=seas|the tail of a black dragon=blackdragontail|the Warhammer of Justice=justice|Wolf headed battle staff=wolf|Wyrmsbane=wyrmsbane</value>
@@ -774,19 +773,20 @@ weaponswap @weaponlist.@determinedweapon
       <value>currentweapon=@weaponlist.%1</value>
     </trigger>
     <var name="damweapons" type="StringList">
-      <value>a copper hammer|the Warhammer of Justice|a sharp iron hatchet|a ghostly sword</value>
-      <json>["a copper hammer","the Warhammer of Justice","a sharp iron hatchet","a ghostly sword"]</json>
+      <value>a fishing rod|the Skean-dhu|PathWeaver HailStrike|a honed shortsword 'Zedraikis'|the dreaded Thorn club|a snake shaped hammer|a forked lightning trident|a dagger of wind|a gigantic maul from ancient times|a honed shortsword 'Zedraikis'|a gleaming white sword|a hammer made from the tail of a red dragon|a horgarian fleshspine|the avalanche|a Skaven Fang|a razor sharp silver lance|a fire-headed mace|the soul reaper</value>
+      <json>["a fishing rod","the Skean-dhu","PathWeaver HailStrike","a honed shortsword 'Zedraikis'","the dreaded Thorn club","a snake shaped hammer","a forked lightning trident","a dagger of wind","a gigantic maul from ancient times","a honed shortsword 'Zedraikis'","a gleaming white sword","a hammer made from the tail of a red dragon","a horgarian fleshspine","the avalanche","a Skaven Fang","a razor sharp silver lance","a fire-headed mace","the soul reaper"]</json>
     </var>
     <alias name="weaponswap">
       <value>#IF (%null(%1) or %1=@currentweapon) {} {
   get %1 @weaponcontainer
   #IF @quickdraw {quickdraw %1} {#IF !%null(@currentweapon) {unwield};wield %1}
   #IF !%null(@currentweapon) {put @currentweapon @weaponcontainer}
+  currentweapon = %1
   }</value>
     </alias>
     <var name="onhitdamtypes" type="Record">
-      <value>The Lesser Eraditor="light|pure"|The Storm Demon="light|pure"|An initiate of the crescent moon=lugroki|A dracolich=lugroki|The thassaloss="pure|lugroki"|A ghost of a decapitated woman="pure|water"|The Efreeti Sultan="ice|pure"|The Terrorite Demon="light|pure"|A witch of the crescent moon=lugroki|The beast="fire|pure|lugroki"|The Eraditor="light|pure"|A soldier="pure|lugroki"|A member of the Trojan Royal House="normal|lugroki"|A drow guard="ice|light|pure|lugroki"|A drow warrior="ice|light|pure|lugroki"|The Great Soulcrusher="light|pure"|Morgoth the Valar God="light|pure|lugroki"|The remorhaz=lugroki|The Thonis="light|pure"|A skeletal dragon=lugroki|A crone of the crescent moon=lugroki|A fanatic Grolim priest="light|pure"|A Medjai Warrior=lugroki|The Balrog="light|pure"|The Efreeti Pasha="ice|light|pure"|The Charred Skeleton="pure|lugroki"|A Guard of Khron="light|ice|conserve"|The Shadow Demon="fire|pure"|The monster="fire|pure|lugroki"|The umber hulk="fire|lugroki"|The horgar="fire|lugroki"|A Doomed Black Wyrm=lugroki|The Sword Demon="light|pure"|The pyrohydra="light|ice"|A Grolim warrior priest="pure|stun|conserve"|The Major Eraditor="light|pure"|The soulcrusher="light|pure"|The gauth="light|pure|lugroki"</value>
-      <json>{"The Lesser Eraditor":["light","pure"],"The Storm Demon":["light","pure"],"An initiate of the crescent moon":"lugroki","A dracolich":"lugroki","The thassaloss":["pure","lugroki"],"A ghost of a decapitated woman":["pure","water"],"The Efreeti Sultan":["ice","pure"],"The Terrorite Demon":["light","pure"],"A witch of the crescent moon":"lugroki","The beast":["fire","pure","lugroki"],"The Eraditor":["light","pure"],"A soldier":["pure","lugroki"],"A member of the Trojan Royal House":["normal","lugroki"],"A drow guard":["ice","light","pure","lugroki"],"A drow warrior":["ice","light","pure","lugroki"],"The Great Soulcrusher":["light","pure"],"Morgoth the Valar God":["light","pure","lugroki"],"The remorhaz":"lugroki","The Thonis":["light","pure"],"A skeletal dragon":"lugroki","A crone of the crescent moon":"lugroki","A fanatic Grolim priest":["light","pure"],"A Medjai Warrior":"lugroki","The Balrog":["light","pure"],"The Efreeti Pasha":["ice","light","pure"],"The Charred Skeleton":["pure","lugroki"],"A Guard of Khron":["light","ice","conserve"],"The Shadow Demon":["fire","pure"],"The monster":["fire","pure","lugroki"],"The umber hulk":["fire","lugroki"],"The horgar":["fire","lugroki"],"A Doomed Black Wyrm":"lugroki","The Sword Demon":["light","pure"],"The pyrohydra":["light","ice"],"A Grolim warrior priest":["pure","stun","conserve"],"The Major Eraditor":["light","pure"],"The soulcrusher":["light","pure"],"The gauth":["light","pure","lugroki"]}</json>
+      <value>The Lesser Eraditor="light|pure"|The Storm Demon="light|pure"|An initiate of the crescent moon=lugroki|A dracolich=lugroki|The thassaloss="pure|lugroki"|A ghost of a decapitated woman="pure|water|light"|The Efreeti Sultan="ice|pure"|The Terrorite Demon="light|pure"|A witch of the crescent moon=lugroki|The beast="fire|pure|lugroki"|The Eraditor="light|pure"|A soldier="pure|lugroki"|A member of the Trojan Royal House="normal|lugroki"|A drow guard="ice|light|pure|lugroki"|A drow warrior="ice|light|pure|lugroki"|The Great Soulcrusher="light|pure"|Morgoth the Valar God="light|pure|lugroki"|The remorhaz=lugroki|The Thonis="light|pure"|A skeletal dragon=lugroki|A crone of the crescent moon=lugroki|A fanatic Grolim priest="light|pure"|A Medjai Warrior=lugroki|The Balrog="light|pure"|The Efreeti Pasha="ice|light|pure"|The Charred Skeleton="pure|lugroki"|A Guard of Khron="light|ice|conserve"|The Shadow Demon="fire|pure"|The monster="fire|pure|lugroki"|The umber hulk="fire|lugroki"|The horgar="fire|lugroki"|A Doomed Black Wyrm=lugroki|The Sword Demon="light|pure"|The pyrohydra="light|ice"|A Grolim warrior priest="pure|stun|conserve"|The Major Eraditor="light|pure"|The soulcrusher="light|pure"|The gauth="light|pure|lugroki"</value>
+      <json>{"The Lesser Eraditor":["light","pure"],"The Storm Demon":["light","pure"],"An initiate of the crescent moon":"lugroki","A dracolich":"lugroki","The thassaloss":["pure","lugroki"],"A ghost of a decapitated woman":["pure","water","light"],"The Efreeti Sultan":["ice","pure"],"The Terrorite Demon":["light","pure"],"A witch of the crescent moon":"lugroki","The beast":["fire","pure","lugroki"],"The Eraditor":["light","pure"],"A soldier":["pure","lugroki"],"A member of the Trojan Royal House":["normal","lugroki"],"A drow guard":["ice","light","pure","lugroki"],"A drow warrior":["ice","light","pure","lugroki"],"The Great Soulcrusher":["light","pure"],"Morgoth the Valar God":["light","pure","lugroki"],"The remorhaz":"lugroki","The Thonis":["light","pure"],"A skeletal dragon":"lugroki","A crone of the crescent moon":"lugroki","A fanatic Grolim priest":["light","pure"],"A Medjai Warrior":"lugroki","The Balrog":["light","pure"],"The Efreeti Pasha":["ice","light","pure"],"The Charred Skeleton":["pure","lugroki"],"A Guard of Khron":["light","ice","conserve"],"The Shadow Demon":["fire","pure"],"The monster":["fire","pure","lugroki"],"The umber hulk":["fire","lugroki"],"The horgar":["fire","lugroki"],"A Doomed Black Wyrm":"lugroki","The Sword Demon":["light","pure"],"The pyrohydra":["light","ice"],"A Grolim warrior priest":["pure","stun","conserve"],"The Major Eraditor":["light","pure"],"The soulcrusher":["light","pure"],"The gauth":["light","pure","lugroki"]}</json>
     </var>
     <var name="damswaprooms" type="Record">
       <value>Third Level of Eastern Tower=pure|The entrance to the great Dwarven kingdom, Inglestone=water|An Old Knotted Tree=normal|Entrance to the Ruins of Kaltor=unlife|Ensor Road near the Battlefields=unlife|Deep down in the ravine=drow|Outside a ruined Gatehouse=water</value>
@@ -822,8 +822,10 @@ quickdraw=0
 }
 #IF @isanimist&gt;0 {
   #ADDKEY damspells fire "cast 'fire seeds'"
-  #ADDKEY damspells normal "cast 'sun arrow'"
+  #ADDKEY damspells normal "cast 'fire seeds'"
+  #ADDKEY damspells pure "cast 'fire seeds'"
   #ADDKEY damspells light "cast 'sun arrow'"
+  #ADDKEY damspells conserve "cast 'sun arrow'"
   #ADDKEY damspells unlife "cast 'sticks to snakes'"
   #ADDKEY damspells dark "cast 'sticks to snakes'"
   #IF @isanimist=2 {mainheal="cast 'burst of life'"}
@@ -898,7 +900,7 @@ quickdraw=0
 #FORALL @masterweaponlist.%1 {#IF (%null(@determinedweapon) and %ismember(%i, @damweapons)) {determinedweapon=%i}}
 #FORALL @masterweaponlist.normal {#IF (%null(@determinedweapon) and %ismember(%i, @damweapons)) {determinedweapon=%i}}</value>
     </alias>
-    <var name="determinedweapon">the Warhammer of Justice</var>
+    <var name="determinedweapon">a gigantic maul from ancient times</var>
     <var name="masterweaponlist" type="Record">
       <value>elemental='Frostbite', the sword of Winter|ice="asdovzixcvj|'Frostbite', the sword of Winter|a bright-blue mace 'Icestorm'|PathWeaver HailStrike|the royal ice dagger"|gas|elf|air=a dagger of wind|plain=a fifteen thronged whip|mythical=a gigantic maul from ancient times|superlarge|silver=a razor sharp silver lance|lugroki="the Warhammer of Justice|a pilfered parang|a sharp iron hatchet"|unlife="the dagger of souls|a huge black demonsword called 'Zcobori'|an infernal soulblade|Claws of Darkness|a pilfered parang"|undead=the soul reaper|horgar="a fire-headed mace|a wicked flaming bastard sword named Flametongue"|energy="the Arcane Hammer of Magic|a ghostly spear|PathWeavers blade"|light=the Warhammer of Justice|large|mental="the dreaded Thorn club|the King's sword"|electricity="a forked lightning trident|a slither of lightning"|dragon="Wyrmsbane|Gorm's dragon slayer|a hammer made from the tail of a red dragon|a dragon tailed whip|Azimers razor talon"|normal="a dark-red blade 'Firestorm'|a fishing rod|the Onyx dagger named 'Chakara the souldrainer'|the ""Claw of Penetration""|the Skean-dhu|a fifteen thronged whip|a jagged spear|a copper hammer|a pilfered parang|a sharp iron hatchet"|human="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'"|water="the spear of the seas|a flowing blue longsword|Poseidon's trident"|magical=the soul reaper|giant=the sword of Halo'ki|poison=a horgarian fleshspine|earth=the avalanche|wood|stun|pure="the Warhammer of Justice|Wolf headed battle staff|a pilfered parang|a sharp iron hatchet"|mana=athame|iron="the Skean-dhu|the mace 'Deathbringer'|the Runeblade 'Lawbringer'|a pilfered parang|a sharp iron hatchet"|fire="a dark-red blade 'Firestorm'|a flaming blade of darkness|a honed shortsword 'Zedraikis'|PathWeaver DeathFlame|a fire-headed mace|a wicked flaming bastard sword named Flametongue"|drow=PathWeaver HailStrike|dark="a flaming blade of darkness|a Skaven Fang|a tendril of darkness|Nemesis, the blade of shadows"|acid="Gorm's dragon slayer|the tail of a black dragon|a horgarian fleshspine"|bleed</value>
       <json>{"elemental":"'Frostbite', the sword of Winter","ice":["asdovzixcvj","'Frostbite', the sword of Winter","a bright-blue mace 'Icestorm'","PathWeaver HailStrike","the royal ice dagger"],"gas":"","elf":"","air":"a dagger of wind","plain":"a fifteen thronged whip","mythical":"a gigantic maul from ancient times","superlarge":"","silver":"a razor sharp silver lance","lugroki":["the Warhammer of Justice","a pilfered parang","a sharp iron hatchet"],"unlife":["the dagger of souls","a huge black demonsword called 'Zcobori'","an infernal soulblade","Claws of Darkness","a pilfered parang"],"undead":"the soul reaper","horgar":["a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"energy":["the Arcane Hammer of Magic","a ghostly spear","PathWeavers blade"],"light":"the Warhammer of Justice","large":"","mental":["the dreaded Thorn club","the King's sword"],"electricity":["a forked lightning trident","a slither of lightning"],"dragon":["Wyrmsbane","Gorm's dragon slayer","a hammer made from the tail of a red dragon","a dragon tailed whip","Azimers razor talon"],"normal":["a dark-red blade 'Firestorm'","a fishing rod","the Onyx dagger named 'Chakara the souldrainer'","the \"Claw of Penetration\"","the Skean-dhu","a fifteen thronged whip","a jagged spear","a copper hammer","a pilfered parang","a sharp iron hatchet"],"human":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'"],"water":["the spear of the seas","a flowing blue longsword","Poseidon's trident"],"magical":"the soul reaper","giant":"the sword of Halo'ki","poison":"a horgarian fleshspine","earth":"the avalanche","wood":"","stun":"","pure":["the Warhammer of Justice","Wolf headed battle staff","a pilfered parang","a sharp iron hatchet"],"mana":"athame","iron":["the Skean-dhu","the mace 'Deathbringer'","the Runeblade 'Lawbringer'","a pilfered parang","a sharp iron hatchet"],"fire":["a dark-red blade 'Firestorm'","a flaming blade of darkness","a honed shortsword 'Zedraikis'","PathWeaver DeathFlame","a fire-headed mace","a wicked flaming bastard sword named Flametongue"],"drow":"PathWeaver HailStrike","dark":["a flaming blade of darkness","a Skaven Fang","a tendril of darkness","Nemesis, the blade of shadows"],"acid":["Gorm's dragon slayer","the tail of a black dragon","a horgarian fleshspine"],"bleed":""}</json>
@@ -966,8 +968,8 @@ spelltype=normal
     </trigger>
     <var name="selfeqscan">0</var>
     <var name="immuneorresfiremobs" type="StringList">
-      <value>The Storm Demon|A ghost of a decapitated woman|The Efreeti Sultan|The Terrorite Demon|The Eraditor|The Thonis|The Efreeti Pasha|The Major Eraditor|The soulcrusher|A captain of the Brettonian High Command|The mystical soulcrusher|A lieutenant of the Brettonian High Command|The Great Soulcrusher|The Lesser Eraditor|A Guard of Khron|Palladrus|The pyrohydra|An Elite Daedroth Guard|A Daedroth|A Grolim warrior priest|The Sword Demon|Pheron the Archmage</value>
-      <json>["The Storm Demon","A ghost of a decapitated woman","The Efreeti Sultan","The Terrorite Demon","The Eraditor","The Thonis","The Efreeti Pasha","The Major Eraditor","The soulcrusher","A captain of the Brettonian High Command","The mystical soulcrusher","A lieutenant of the Brettonian High Command","The Great Soulcrusher","The Lesser Eraditor","A Guard of Khron","Palladrus","The pyrohydra","An Elite Daedroth Guard","A Daedroth","A Grolim warrior priest","The Sword Demon","Pheron the Archmage"]</json>
+      <value>The Storm Demon|A ghost of a decapitated woman|The Efreeti Sultan|The Terrorite Demon|The Eraditor|The Thonis|The Efreeti Pasha|The Major Eraditor|The soulcrusher|A captain of the Brettonian High Command|The mystical soulcrusher|A lieutenant of the Brettonian High Command|The Great Soulcrusher|The Lesser Eraditor|A Guard of Khron|Palladrus|The pyrohydra|An Elite Daedroth Guard|A Daedroth|A Grolim warrior priest|The Sword Demon|Pheron the Archmage|Rowlik, the Master Summoner</value>
+      <json>["The Storm Demon","A ghost of a decapitated woman","The Efreeti Sultan","The Terrorite Demon","The Eraditor","The Thonis","The Efreeti Pasha","The Major Eraditor","The soulcrusher","A captain of the Brettonian High Command","The mystical soulcrusher","A lieutenant of the Brettonian High Command","The Great Soulcrusher","The Lesser Eraditor","A Guard of Khron","Palladrus","The pyrohydra","An Elite Daedroth Guard","A Daedroth","A Grolim warrior priest","The Sword Demon","Pheron the Archmage","Rowlik, the Master Summoner"]</json>
     </var>
     <var name="slaytypestospells" type="Record">
       <value>elemental|elf="dark|unlife"|mythical|lugroki="light|fire|pure"|undead|dragon|human|magical|drow="pure|ice|lugroki"|demon="pure|light"|snake</value>
@@ -979,8 +981,8 @@ spelltype=normal
 #BUTTON 1 @damweaponsshort</value>
     </alias>
     <var name="damweaponsshort" type="StringList">
-      <value>copper|justice|hatchet</value>
-      <json>["copper","justice","hatchet"]</json>
+      <value>fishing|skean|hailstrike|zedraikis|dreaded|snake|forked|winddagger|gigantic|zedraikis|gleaming|fashioned|fleshspine|avalanche|skaven|lance|headed|reaper</value>
+      <json>["fishing","skean","hailstrike","zedraikis","dreaded","snake","forked","winddagger","gigantic","zedraikis","gleaming","fashioned","fleshspine","avalanche","skaven","lance","headed","reaper"]</json>
     </var>
     <trigger priority="5960" trigontrig="false">
       <pattern>^(*)ASDFSADF ({|~(invisible~)}){| }({|~(venom~)}){| }({|~(humming~)})$</pattern>
@@ -1026,8 +1028,8 @@ spelltype=normal
   #IF @damswaponroom {#IF !%null(@damswaprooms.%1) {use @damswaprooms.%1}}
   }</value>
     </trigger>
-    <var name="roomname">Temple street</var>
-    <var name="exits">North|East|South</var>
+    <var name="roomname">The Reception</var>
+    <var name="exits">North</var>
     <var name="waterrooms">A Wide Pool|A Narrow Underground Stream|A Deep Eddy|An Underground Lake</var>
     <var name="wildmagicrooms" type="StringList">
       <value>A Magical Waterfall|In the Essence Flows</value>
@@ -1112,7 +1114,7 @@ weaponbagscan
 gag all get remove
 gag all spell set</value>
     </alias>
-    <var name="version">DS v1.37</var>
+    <var name="version">DS v1.38</var>
     <trigger priority="23620">
       <pattern>You can't seem to do that here!</pattern>
       <value>nomagic=1</value>
@@ -1120,7 +1122,7 @@ gag all spell set</value>
     <var name="justrecalled">0</var>
   </class>
   <class name="group">
-    <var name="leader">Soren</var>
+    <var name="leader">Istarion</var>
     <trigger priority="1640">
       <pattern>^(%w) issues the order 'recall'</pattern>
       <value>#IF (%1=@leader or %1="someone") {recallorder}</value>
@@ -1149,7 +1151,7 @@ leader=%1</value>
       <value>damtype=%1
 use slay %1</value>
     </trigger>
-    <var name="groupposition">standing</var>
+    <var name="groupposition">resting</var>
     <alias name="groupstatusline">
       <value>#IF @aheal {
   #IF (@ispriest=2) {
@@ -1228,7 +1230,7 @@ use slay %1</value>
 </value>
     </trigger>
     <class name="tracking">
-      <var name="tracktarget">river</var>
+      <var name="tracktarget">charred</var>
       <trigger priority="94090">
         <pattern>You sense a trail (%w) from here!</pattern>
         <value>#IF (!@leading) {@trackchannel Track: Target: @tracktarget, Direction: &amp;+G%upper(%copy(%1,1,1))%copy(%1, 2)&amp;n} {
@@ -1409,10 +1411,7 @@ temporarilyleading=0</value>
 #IF (!@leading and @ismagician=0) {tell @askregenchar summon}</value>
     </trigger>
     <class name="grouplist">
-      <var name="grouplist" type="StringList">
-        <value>Istarion|Nym|Soren|Oka|Stauf|Otto|Gloom|Overkill|Darthvader|Skinhead|Ultrahero|Coore|Skyth|Zaver|Vixen|Kraftwerk|Granite|Akira|Schmu|Pazuzu</value>
-        <json>["Istarion","Nym","Soren","Oka","Stauf","Otto","Gloom","Overkill","Darthvader","Skinhead","Ultrahero","Coore","Skyth","Zaver","Vixen","Kraftwerk","Granite","Akira","Schmu","Pazuzu"]</json>
-      </var>
+      <var name="grouplist" type="Literal"/>
       <trigger priority="96910">
         <pattern>Your group consists of:</pattern>
         <value>grouplist=""
@@ -1433,11 +1432,8 @@ nightbladelist=""</value>
         <pattern>^(%w) is now a member of your group.</pattern>
         <value>#ADDITEM grouplist %1</value>
       </trigger>
-      <var name="priestlist" type="StringList">
-        <value>Ultrahero|Coore|Akira</value>
-        <json>["Ultrahero","Coore","Akira"]</json>
-      </var>
-      <var name="halfpriestlist" type="StringList"/>
+      <var name="priestlist" type="Literal"/>
+      <var name="halfpriestlist" type="Literal"/>
       <trigger priority="4740">
         <pattern>~[(%n)%s(%w)~/(%w)~]%s(%w)%s~[{| |  }(%n)~%H%s(%n)~%M%s%n~%V~] NotHere</pattern>
         <value><![CDATA[#ADDITEM grouplist %4
@@ -1475,13 +1471,10 @@ arescuetype=None
         <value>#DELITEM rescuelist %1</value>
       </alias>
       <var name="grouplevellist" type="Record">
-        <value>Ultrahero=92|Akira=74|Istarion=65|Oka=89|Nym=79|Skinhead=70|Granite=67|Kraftwerk=98|Zaver=61|Overkill=88|Gloom=53|Pazuzu=59|Vixen=70|Otto=67|Stauf=65|Soren=60|Skyth=68|Darthvader=55|Schmu=72|Coore=87</value>
-        <json>{"Ultrahero":92,"Akira":74,"Istarion":65,"Oka":89,"Nym":79,"Skinhead":70,"Granite":67,"Kraftwerk":98,"Zaver":61,"Overkill":88,"Gloom":53,"Pazuzu":59,"Vixen":70,"Otto":67,"Stauf":65,"Soren":60,"Skyth":68,"Darthvader":55,"Schmu":72,"Coore":87}</json>
+        <value>Istarion=89|Neaga=59</value>
+        <json>{"Istarion":89,"Neaga":59}</json>
       </var>
-      <var name="priestmanadb" type="Record">
-        <value>Ultrahero=100|Akira=25|Coore=100</value>
-        <json>{"Ultrahero":100,"Akira":25,"Coore":100}</json>
-      </var>
+      <var name="priestmanadb" type="Literal"/>
       <var name="setpriestchar">Bucket</var>
       <var name="notheres" type="Literal"/>
       <alias name="sumnotheres">
@@ -1503,10 +1496,7 @@ $index = 1
         <value>grou
 #alarm +3 {sumnotheres}</value>
       </alias>
-      <var name="animistlist" type="StringList">
-        <value>Soren|Kraftwerk|Granite</value>
-        <json>["Soren","Kraftwerk","Granite"]</json>
-      </var>
+      <var name="animistlist" type="Literal"/>
       <alias name="setpriestshelper">
         <value>$avgmana = 0;
 #FO %dbvalues(@priestmanadb) {$avgmana=$avgmana+%i}
@@ -1564,14 +1554,8 @@ $index = 1
   #IF $index&gt;%numitems($summoners) {$index=1}
   }</value>
       </alias>
-      <var name="magicianlist" type="StringList">
-        <value>Nym|Oka|Stauf|Gloom|Darthvader|Skyth|Vixen</value>
-        <json>["Nym","Oka","Stauf","Gloom","Darthvader","Skyth","Vixen"]</json>
-      </var>
-      <var name="nightbladelist" type="StringList">
-        <value>Zaver|Pazuzu</value>
-        <json>["Zaver","Pazuzu"]</json>
-      </var>
+      <var name="magicianlist" type="Literal"/>
+      <var name="nightbladelist" type="Literal"/>
       <alias name="ddnh">
         <value>;tell mages and nightblades that aren't here to dd or merge.
 #FO @notheres {
@@ -1581,8 +1565,7 @@ $index = 1
       </alias>
     </class>
     <var name="blindlist" type="StringList">
-      <value>Turia|Fastball</value>
-      <json>["Turia","Fastball"]</json>
+      <json>[]</json>
     </var>
     <trigger priority="96950">
       <pattern>^(%w) {is blind.|seems to be blinded.}</pattern>
@@ -1615,7 +1598,7 @@ $index = 1
       <var name="popcheckpending">0</var>
       <alias name="popcheck">
         <value>#IF %1="oc" {popcheckqueue="coven|graveyard|uw|dungeon|shadowdwell";dopopcheck soulcrusher} {
-  #IF %1="nc" {popcheckqueue="drow|alterac|sarakesh|khronatio";dopopcheck medjai} {dopopcheck %1}
+  #IF %1="nc" {popcheckqueue="drow|alterac|sarakesh|khronatio|whitebridge|firbolg|cove|wizarn";dopopcheck medjai} {dopopcheck %1}
   }</value>
       </alias>
       <var name="popcheckqueue" type="StringList">
@@ -1634,7 +1617,11 @@ $index = 1
 #IF %1="graveyard" {cast 'summon' 8.dracolich}
 #IF %1="dungeon" {cast 'summon' 8.monster}
 #IF %1="coven" {cast 'summon' 6.crone}
-#IF %1="shadowdwell" {cast 'summon' 6.malebranche}</value>
+#IF %1="shadowdwell" {cast 'summon' 6.malebranche}
+#IF %1="wizarn" {cast 'summon' 6.wizarne}
+#IF %1="cove" {cast 'summon' 6.mutineer}
+#IF %1="firbolg" {cast 'summon' 18.firbolg}
+#IF %1="whitebridge" {cast 'summon' 10.councillor}</value>
       </alias>
       <trigger priority="104040">
         <pattern>You failed.</pattern>
@@ -1656,8 +1643,8 @@ $index = 1
   }</value>
       </alias>
       <var name="popcheckarealist" type="StringList">
-        <value>alterac|drow|medjai|sarakesh|khronatio|soulcrusher|uw|graveyard|dungeon|coven|shadowdwell</value>
-        <json>["alterac","drow","medjai","sarakesh","khronatio","soulcrusher","uw","graveyard","dungeon","coven","shadowdwell"]</json>
+        <value>alterac|drow|medjai|sarakesh|khronatio|soulcrusher|uw|graveyard|dungeon|coven|shadowdwell|cove|whitebridge|firbolg|wizarn</value>
+        <json>["alterac","drow","medjai","sarakesh","khronatio","soulcrusher","uw","graveyard","dungeon","coven","shadowdwell","cove","whitebridge","firbolg","wizarn"]</json>
       </var>
       <var name="popcheckzone">uw</var>
       <trigger priority="104090">
@@ -1816,7 +1803,13 @@ priestlist=""</value>
 #IF (%1="aheal" and @ispriest=2) {#IF %2="on" {aheal=1;t @leader GroupHealing On};#IF %2="off" {aheal=0;t @leader GroupHealing Off ~(and I'm Pr/Pr, so I hope you know what you're doing.~)}}
 #IF (%1="acop" and %ismember(%2,"on|On|off|Off") and @ismagician>0) {#IF %ismember(%2,"On|on") {acop=1} {acop=0};t @leader Acop set to @acop}
 #IF (%1="recop" and %ismember(%2,"on|On|off|Off") and @ismagician>0) {#IF %ismember(%2,"On|on") {recop=1} {recop=0};t @leader Recop set to @recop}
-#IF (%1="gate" and @ispriest=2) {gate %2;retrylostcon=1;gatetarget=%2;#alarm +2 {gt Gate created to @gatetarget;#alarm +5 {retrylostcon=0}}}
+#IF (%1="gate" and @ispriest=2) {
+  #T+ gatelistener
+  gate %2
+  retrylostcon=1
+  gatetarget=%2
+  #alarm +7 {retrylostcon=0}
+}
 #IF (%ismember(%1, mhp|thp|ghp|gphp|gphpn) and !(@ispriest>0 or @isanimist=2)) {t @leader I think you need a few more cocktails.} {
   #IF (%1="mhp") {mhp=%2;tell @leader mhp is now @mhp}
   #IF (%1="thp") {thp=%2;tell @leader thp is now @thp}
@@ -1860,8 +1853,8 @@ totaldamagers=0</value>
         </trigger>
       </class>
       <var name="dsd" type="Record">
-        <value>Ultrahero=1|Insane=2519|Dreadlock=2851|Zog=2268|Oka=1886|Fan=2341|Viltaire=306|Musty=0|Mommy=2073|Shroom=1858|Tamara=1985|Zaver=73|Ethernet=4022|Staley=1016|Wulfgard=1128|Xyron=1445|Indecision=1147|Cd=1|Greenknight=2749|Flame=2812|Saibot=530|Littletree=15|Werzerker=1|Kolrath=104|Enter=2070|Hurricane=1745|Fastball=1647|Tesla=2148|Zeed=7|Yaki=623|Twov=1668|Skyr=439|Pest=1704|Orca=3290|Mule=557|Halo=1|Belial=1425|Smaug=1481|Coore=2|Chico=392|Yoggin=2|River=0</value>
-        <json>{"Ultrahero":1,"Insane":2519,"Dreadlock":2851,"Zog":2268,"Oka":1886,"Fan":2341,"Viltaire":306,"Musty":0,"Mommy":2073,"Shroom":1858,"Tamara":1985,"Zaver":73,"Ethernet":4022,"Staley":1016,"Wulfgard":1128,"Xyron":1445,"Indecision":1147,"Cd":1,"Greenknight":2749,"Flame":2812,"Saibot":530,"Littletree":15,"Werzerker":1,"Kolrath":104,"Enter":2070,"Hurricane":1745,"Fastball":1647,"Tesla":2148,"Zeed":7,"Yaki":623,"Twov":1668,"Skyr":439,"Pest":1704,"Orca":3290,"Mule":557,"Halo":1,"Belial":1425,"Smaug":1481,"Coore":2,"Chico":392,"Yoggin":2,"River":0}</json>
+        <value>Istarion=4296|Insane=2590|Dreadlock=996|Tyr=3076|Oka=12584|Fan=6174|Musty=5693|Mommy=4122|Shroom=791|Anasadi=8280|Jagularen=5244|Tamara=17552|Knurks=10446|Jorah=683|Ethernet=5559|Damien=5067|Xyron=12223|Overkill=6278|Cd=11|Greenknight=16608|Jacques=14535|Hurricane=5611|Turia=3712|Triad=1232|Tesla=3447|Twov=13963|Skyr=1060|Ride=5027|Orca=8331|Mule=3145|Mask=4613|Halo=6|Tizgib=1053|Coore=25|Yoggin=5|Rumpy=2717|River=0</value>
+        <json>{"Istarion":4296,"Insane":2590,"Dreadlock":996,"Tyr":3076,"Oka":12584,"Fan":6174,"Musty":5693,"Mommy":4122,"Shroom":791,"Anasadi":8280,"Jagularen":5244,"Tamara":17552,"Knurks":10446,"Jorah":683,"Ethernet":5559,"Damien":5067,"Xyron":12223,"Overkill":6278,"Cd":11,"Greenknight":16608,"Jacques":14535,"Hurricane":5611,"Turia":3712,"Triad":1232,"Tesla":3447,"Twov":13963,"Skyr":1060,"Ride":5027,"Orca":8331,"Mule":3145,"Mask":4613,"Halo":6,"Tizgib":1053,"Coore":25,"Yoggin":5,"Rumpy":2717,"River":0}</json>
       </var>
       <var name="dsdsorted" type="Literal"/>
       <alias name="dspalias">
@@ -1878,8 +1871,8 @@ maxval=-1
 }
 #If @dsrequested&gt;0 {dsdisplay @dsrequested}</value>
       </alias>
-      <var name="maxname">River</var>
-      <var name="maxval">0</var>
+      <var name="maxname">Akira</var>
+      <var name="maxval">1</var>
       <alias name="dsdisplay">
         <value><![CDATA[dsoutput=""
 dsoutput=%concat("gt ",@dsscantype," &+G1. &+R<3 &+M",%dbkeys(@dsdsorted).1,"&n&+R(&+r",@dsdsorted.1"&+R) <3")
@@ -1941,7 +1934,7 @@ dsrequested=0
 ;gt DamAvg &+G1. &+R~<3 %dbkeys(@dsdsorted).1~(&+r@dsdsorted.1&+R~) ~<3 &+G2. &+c%dbkeys(@dsdsorted).2~(&+C@dsdsorted.2&+c~) 3. %dbkeys(@dsdsorted).3 ~(@dsdsorted.3~) 4. %dbkeys(@dsdsorted).4 ~(@dsdsorted.4~) 5. %dbkeys(@dsdsorted).5 ~(@dsdsorted.5~)
 ;gt DamAvg 6. %dbkeys(@dsdsorted).6 ~(@dsdsorted.6~) 7. %dbkeys(@dsdsorted).7 ~(@dsdsorted.7~) 8. %dbkeys(@dsdsorted).8 ~(@dsdsorted.8~) 9. %dbkeys(@dsdsorted).9 ~(@dsdsorted.9~) 10. %dbkeys(@dsdsorted).10 ~(@dsdsorted.10~)]]></value>
       </alias>
-      <var name="dsoutput"><![CDATA[gt DamAvg &+G1. &+R<3 &+MEthernet&n&+R(&+r4637&+R) <3]]></var>
+      <var name="dsoutput"><![CDATA[gt DamAvg &+G1. &+R<3 &+MIstarion&n&+R(&+r16328&+R) <3 &+G2. &+cSkinhead(&+C10567&+c) &+G3. &+cTizgib(&+C10352&+c) &+G4. &+cLegendary(&+C9143&+c) &+G5. &+cSkyie(&+C8986&+c)|gt DamAvg &+G6. &+cLuca(&+C8861&+c) &+G7. &+cKosken(&+C8500&+c) &+G8. &+cCoward(&+C7379&+c) &+G9. &+cSoren(&+C7306&+c) &+G10. &+cBosch(&+C6820&+c)]]></var>
       <trigger priority="166140">
         <pattern>%w tells the group, 'top(%n)'</pattern>
         <value>#IF @showlogsongt {damscan %1}</value>
@@ -1956,10 +1949,10 @@ dsscantype=DamAvg
 #IF !%null(%1) {dsrequested=%1}
 #IF %2="eff" {dsscantype=DamEfficiency}</value>
       </alias>
-      <var name="totalavg">50988</var>
-      <var name="totaldamagers">27</var>
+      <var name="totalavg">196708</var>
+      <var name="totaldamagers">32</var>
       <var name="dsscantype">DamAvg</var>
-      <var name="totaleff">587</var>
+      <var name="totaleff">2215</var>
       <trigger priority="166140">
         <pattern>%w tells the group, 'eff(%n)'</pattern>
         <value>#IF @showlogsongt {damscan %1 eff}</value>
@@ -1983,7 +1976,7 @@ dsscantype=DamAvg
   gphp=%4
 }</value>
     </trigger>
-    <var name="gatetarget">kraftwerk</var>
+    <var name="gatetarget">east</var>
     <class name="summons">
       <var name="summonpending">0</var>
       <trigger priority="9280">
@@ -2023,6 +2016,24 @@ dsscantype=DamAvg
       <value>#IF @nomagic {recal} {recall}
 justrecalled=1</value>
     </alias>
+    <class name="gatelistener" enabled="false">
+      <trigger priority="24690">
+        <pattern>You wait in vain as no dimension portal appears.</pattern>
+        <value>gt Failed to establish gate.
+#T- gatelistener</value>
+      </trigger>
+      <trigger priority="24700">
+        <pattern>You create a red field of energy.</pattern>
+        <value>gt Gate created to @gatetarget.
+#T- gatelistener</value>
+      </trigger>
+    </class>
+    <trigger priority="1649">
+      <pattern>^@leader tells you '(%w) (*)'</pattern>
+      <value>#IF %1="scribe" {
+  #IF (@ismagician+@ispriest&gt;0) {get parchment @weaponcontainer;scribe %2;give scroll @leader} {t @leader My class cannot scribe.}
+}</value>
+    </trigger>
   </class>
   <class name="lostcon">
     <trigger priority="2940">
@@ -2124,7 +2135,7 @@ flee</value>
  #ADD poollookcount 1
 }</value>
     </alias>
-    <var name="poollookcount">22</var>
+    <var name="poollookcount">68</var>
     <trigger priority="168350">
       <pattern>You are thirsty.</pattern>
       <value>drink mug
@@ -2167,7 +2178,13 @@ eat grape</value>
 
 1.37:
   - Added ddnh alias, tell all magician and nightblade who are not here to dd or merge (ma/nb will be told dd, not both). Operates off the last group list seen.
-  - Added @iswuss variable, if @iswuss = 1, will not enter field when leader gt's enter field</var>
+  - Added @iswuss variable, if @iswuss = 1, will not enter field when leader gt's enter field
+
+1.38:
+  - holy gate triggers now give more informative feedback on the result of the gate attempt.
+  - added satiate to spellbot
+  - add cove, wizarn, whitebridge, and firbolg to popcheck
+  - add scribe trigs for leader</var>
     <class name="autobuy">
       <trigger priority="7100">
         <pattern>^{Sheila|The secretary} says 'Sorry @charname, you don't have the (%n) gold coins that we would have to charge for that corpse retrieval!'</pattern>
@@ -2230,17 +2247,17 @@ donate corpse</value>
     <macro key="CTRL-KEY7">
       <value>#IF @isrogue=2 {peek up} {tell @peeker peek up}</value>
     </macro>
-    <var name="peeker">nude</var>
+    <var name="peeker">Charle</var>
   </class>
   <class name="preferencevariables">
     <var name="whitelist" type="StringList">
       <value>Ghodris|Wind|Orca|Totici|Entropy|Mommy|Daddy|Brutus|Tiberius|Tembo|Dylma</value>
       <json>["Ghodris","Wind","Orca","Totici","Entropy","Mommy","Daddy","Brutus","Tiberius","Tembo","Dylma"]</json>
     </var>
-    <var name="lowmana">100</var>
+    <var name="lowmana">250</var>
     <var name="weaponcontainer">void</var>
     <var name="misccontainer"/>
-    <var name="wimplevel">843.15</var>
+    <var name="wimplevel">962.5</var>
     <var name="quickdraw">0</var>
     <var name="damswaponroom">1</var>
     <var name="acop">
@@ -2275,7 +2292,7 @@ assistpending=0
 ;#say %1, @onhitdamtypes.%1, @currentdam
 #IF @spellswaponhit {#IF !%null(@onhitdamtypes.%1) {spellswitch @onhitdamtypes.%1}}</value>
     </trigger>
-    <var name="currenttarget">A Polar Bear</var>
+    <var name="currenttarget">someone</var>
     <var name="intrapulse">0</var>
     <trigger priority="1150">
       <pattern>^(*) {misses|hits|massacres|obliterates|annihilates|vaporizes|pulverizes|atomizes|ultraslays|~*~*~*ULTRASLAYS~*~*~*} (*){ to small fragments|} with {his|her|its}{ deadly|} %w.</pattern>
@@ -2393,7 +2410,7 @@ fighting=1</value>
       <pattern>{Whom do you wish to assist?|No way! You are fighting for your life!}</pattern>
       <value>assistpending=0</value>
     </trigger>
-    <var name="currenttank">Soren</var>
+    <var name="currenttank">Istarion</var>
     <trigger priority="12720">
       <pattern>You are rescued by *, you are confused!</pattern>
       <value>fighting=0</value>
@@ -2460,8 +2477,7 @@ autofightdecision</value>
   <class name="roomscan">
     <trigger priority="6290" ansi="true" trigontrig="false">
       <pattern>^%e[33m(*)%e[0m{ ~(hidden~)| ~(invisible~)| ~(invisible~) ~(hidden~)|} is here, fighting (%w).{ ~(Red Aura~)| ~(White Aura~)|}</pattern>
-      <value>;#say triggered aggie thing
-#IF @roomscantoprompt {
+      <value>#IF @roomscantoprompt {
   #IF @currenttank="" {currenttank=%2}
   moblist = %delitem(%1, @moblist)
   agglist = %additem(%1, @agglist)
@@ -2469,8 +2485,8 @@ autofightdecision</value>
 }</value>
     </trigger>
     <var name="moblist" type="StringList">
-      <value>A high guard wanders here, looking for signs of trouble.|A weary traveller rests here, taking a break from his journey.</value>
-      <json>["A high guard wanders here, looking for signs of trouble.","A weary traveller rests here, taking a break from his journey."]</json>
+      <value>A large white swan flaps it's wings and honks.|The receptionist sits here, ready to help you check into a room.</value>
+      <json>["A large white swan flaps it's wings and honks.","The receptionist sits here, ready to help you check into a room."]</json>
     </var>
     <var name="agglist" type="Literal"/>
     <var name="assistlist" type="Literal"/>
@@ -2494,8 +2510,8 @@ autofightdecision</value>
     </trigger>
     <var name="knownmoblist" type="Literal"/>
     <var name="knownmobs" type="Record">
-      <value>A dragon skeleton stands here with smoke seeping from its nasal cavity.=A skeletal dragon|An elven ranger scouts the surrounding hinterland=An Elven waywatcher|A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.=An acolyte of Sarakesh|A drow is here, guarding the hallways.=A drow guard|A minstrel of the argonauts stands here.=uwman|A member of the Trojan Royal House stands here.=A member of the Trojan Royal House|You see the ghost of a long dead woman floating here.=A ghost of a decapitated woman|A lesser lich of the Sarakeshian order glares at you with its empty eyes.=An acolyte of Sarakesh|An angry looking soulcrusher is standing here.=The soulcrusher|A mythical being stands here.=Ajax|A wizarne is here studying the arts of magic.=A wizarne|A warrior lies here resting.=A Medjai Warrior|The spirit of a dead sailor haunts the wreckage of his vessel.=A revenant sailor|A mythical man of ancient Greece stands here.=uwman|A deceased mariner haunts the cove here.=A phantom mariner|A large Kronatio cityguard is standing here.=A Guard of Khron|A winged hulking fiend stomps around here.=A malebranche|A wizarn is here studying the arts of magic.=A wizarn|A famed and glorious soldier stands here.=A soldier|The ugly wight of a long-dead seafarer hovers here.=A seafarer's wight|A hungry warg glares at you and licks its fangs.=A hungry warg|a soldier of the gods stands here.=A soldier|A great soulcrusher stands here.=The Great Soulcrusher|A ghostly bilge-rat wails as it approaches you.=A ghostly bilge-rat|The Lord of the Citadel is here looking at his maps.=Lord Ceanyth|An executive officier of the city authority is busy working here.=An Executive Officer|A warrior stands here protecting the gates of the palace.=A Medjai Warrior|The musical son of Orpheus stands here.=Musaeus|The decomposing corpse of a dragon stumbles around here.=A dracolich|A creepy monster stands in front of you.=The monster|A Fallen Knight stands guarding the Chamber of Paladine.=A Fallen Knight|A brave soldier stands here having been rewarded by the gods.=A brave soldier|A lieutenant of the high command oversees proceedings=A lieutenant of the Brettonian High Command|A huge, ancient tree towers above you.=A huge, ancient tree|A powerful witch of the hive is busy creating new incantations.=A witch of the crescent moon|A white ambience surrounds this mutineer.=The dead mutineer|A young initiate of the hive awaits instruction from her superiors here.=An initiate of the crescent moon|The apparition of a shipwrecked buccaneer roams the cove.=A phantasmal buccaneer|A blurred figure stands here.=The soulcrusher|A warrior stands here protecting the palace.=A Medjai Warrior|A warrior stands here overseeing the protection of Egypt.=A Medjai Warrior|A mystical soulcrusher=The mystical soulcrusher|This careless mariner died from alcohol poisoning rather than a shipwreck.=A haunted grog-fiend|An old crone of the hive scrunches her face up at your presence.=A crone of the crescent moon|A very large drow is here, dressed in black and gold armor.=A drow elite guard|A member of the Alterac high command opposes you=A captain of the Brettonian High Command|A huge warg stands before you, saliva dripping from its huge fangs.=A bloodthirsty warg|A warrior stands here looking at antiquity.=A Medjai Warrior|An elderly black wyrm, nearing death, staggers around here.=A Doomed Black Wyrm|A winged sinewy demon glides over the rooftops.=A greater nabassu|The soulcrusher glances at you with fear.=The soulcrusher|A drow warrior is here, training.=A drow warrior|A drow guard is here, sleeping in his bed.=A drow guard|A drow guard is here, playing cards.=A drow guard|A cabinet member is here debating important issues.=A Cabinet Member|A Whitebridge Councillor is here in discussion.=A Whitebridge Councillor|A great skeleton clad in full platemail raises his sword as you enter.=A Templar of Sarakesh|A black warg glances at you, apparently too tired to attempt to eat you.=A sleepy warg</value>
-      <json>{"A dragon skeleton stands here with smoke seeping from its nasal cavity.":"A skeletal dragon","An elven ranger scouts the surrounding hinterland":"An Elven waywatcher","A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.":"An acolyte of Sarakesh","A drow is here, guarding the hallways.":"A drow guard","A minstrel of the argonauts stands here.":"uwman","A member of the Trojan Royal House stands here.":"A member of the Trojan Royal House","You see the ghost of a long dead woman floating here.":"A ghost of a decapitated woman","A lesser lich of the Sarakeshian order glares at you with its empty eyes.":"An acolyte of Sarakesh","An angry looking soulcrusher is standing here.":"The soulcrusher","A mythical being stands here.":"Ajax","A wizarne is here studying the arts of magic.":"A wizarne","A warrior lies here resting.":"A Medjai Warrior","The spirit of a dead sailor haunts the wreckage of his vessel.":"A revenant sailor","A mythical man of ancient Greece stands here.":"uwman","A deceased mariner haunts the cove here.":"A phantom mariner","A large Kronatio cityguard is standing here.":"A Guard of Khron","A winged hulking fiend stomps around here.":"A malebranche","A wizarn is here studying the arts of magic.":"A wizarn","A famed and glorious soldier stands here.":"A soldier","The ugly wight of a long-dead seafarer hovers here.":"A seafarer's wight","A hungry warg glares at you and licks its fangs.":"A hungry warg","a soldier of the gods stands here.":"A soldier","A great soulcrusher stands here.":"The Great Soulcrusher","A ghostly bilge-rat wails as it approaches you.":"A ghostly bilge-rat","The Lord of the Citadel is here looking at his maps.":"Lord Ceanyth","An executive officier of the city authority is busy working here.":"An Executive Officer","A warrior stands here protecting the gates of the palace.":"A Medjai Warrior","The musical son of Orpheus stands here.":"Musaeus","The decomposing corpse of a dragon stumbles around here.":"A dracolich","A creepy monster stands in front of you.":"The monster","A Fallen Knight stands guarding the Chamber of Paladine.":"A Fallen Knight","A brave soldier stands here having been rewarded by the gods.":"A brave soldier","A lieutenant of the high command oversees proceedings":"A lieutenant of the Brettonian High Command","A huge, ancient tree towers above you.":"A huge, ancient tree","A powerful witch of the hive is busy creating new incantations.":"A witch of the crescent moon","A white ambience surrounds this mutineer.":"The dead mutineer","A young initiate of the hive awaits instruction from her superiors here.":"An initiate of the crescent moon","The apparition of a shipwrecked buccaneer roams the cove.":"A phantasmal buccaneer","A blurred figure stands here.":"The soulcrusher","A warrior stands here protecting the palace.":"A Medjai Warrior","A warrior stands here overseeing the protection of Egypt.":"A Medjai Warrior","A mystical soulcrusher":"The mystical soulcrusher","This careless mariner died from alcohol poisoning rather than a shipwreck.":"A haunted grog-fiend","An old crone of the hive scrunches her face up at your presence.":"A crone of the crescent moon","A very large drow is here, dressed in black and gold armor.":"A drow elite guard","A member of the Alterac high command opposes you":"A captain of the Brettonian High Command","A huge warg stands before you, saliva dripping from its huge fangs.":"A bloodthirsty warg","A warrior stands here looking at antiquity.":"A Medjai Warrior","An elderly black wyrm, nearing death, staggers around here.":"A Doomed Black Wyrm","A winged sinewy demon glides over the rooftops.":"A greater nabassu","The soulcrusher glances at you with fear.":"The soulcrusher","A drow warrior is here, training.":"A drow warrior","A drow guard is here, sleeping in his bed.":"A drow guard","A drow guard is here, playing cards.":"A drow guard","A cabinet member is here debating important issues.":"A Cabinet Member","A Whitebridge Councillor is here in discussion.":"A Whitebridge Councillor","A great skeleton clad in full platemail raises his sword as you enter.":"A Templar of Sarakesh","A black warg glances at you, apparently too tired to attempt to eat you.":"A sleepy warg"}</json>
+      <value>A dragon skeleton stands here with smoke seeping from its nasal cavity.=A skeletal dragon|An elven ranger scouts the surrounding hinterland=An Elven waywatcher|A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.=An acolyte of Sarakesh|A drow is here, guarding the hallways.=A drow guard|A minstrel of the argonauts stands here.=uwman|A member of the Trojan Royal House stands here.=A member of the Trojan Royal House|You see the ghost of a long dead woman floating here.=A ghost of a decapitated woman|A lesser lich of the Sarakeshian order glares at you with its empty eyes.=An acolyte of Sarakesh|An angry looking soulcrusher is standing here.=The soulcrusher|A Castle Guard stands here.=The Castle Guard|A mythical being stands here.=Ajax|A wizarne is here studying the arts of magic.=A wizarne|A warrior lies here resting.=A Medjai Warrior|The spirit of a dead sailor haunts the wreckage of his vessel.=A revenant sailor|A mythical man of ancient Greece stands here.=uwman|A deceased mariner haunts the cove here.=A phantom mariner|A large Kronatio cityguard is standing here.=A Guard of Khron|A winged hulking fiend stomps around here.=A malebranche|A wizarn is here studying the arts of magic.=A wizarn|A famed and glorious soldier stands here.=A soldier|The ugly wight of a long-dead seafarer hovers here.=A seafarer's wight|A hungry warg glares at you and licks its fangs.=A hungry warg|a soldier of the gods stands here.=A soldier|A great soulcrusher stands here.=The Great Soulcrusher|A ghostly bilge-rat wails as it approaches you.=A ghostly bilge-rat|The Lord of the Citadel is here looking at his maps.=Lord Ceanyth|An executive officier of the city authority is busy working here.=An Executive Officer|A warrior stands here protecting the gates of the palace.=A Medjai Warrior|The musical son of Orpheus stands here.=Musaeus|The decomposing corpse of a dragon stumbles around here.=A dracolich|A creepy monster stands in front of you.=The monster|A Fallen Knight stands guarding the Chamber of Paladine.=A Fallen Knight|A brave soldier stands here having been rewarded by the gods.=A brave soldier|A lieutenant of the high command oversees proceedings=A lieutenant of the Brettonian High Command|A huge, ancient tree towers above you.=A huge, ancient tree|A powerful witch of the hive is busy creating new incantations.=A witch of the crescent moon|A white ambience surrounds this mutineer.=The dead mutineer|A young initiate of the hive awaits instruction from her superiors here.=An initiate of the crescent moon|The apparition of a shipwrecked buccaneer roams the cove.=A phantasmal buccaneer|A blurred figure stands here.=The soulcrusher|A warrior stands here protecting the palace.=A Medjai Warrior|A warrior stands here overseeing the protection of Egypt.=A Medjai Warrior|A mystical soulcrusher=The mystical soulcrusher|This careless mariner died from alcohol poisoning rather than a shipwreck.=A haunted grog-fiend|An old crone of the hive scrunches her face up at your presence.=A crone of the crescent moon|A very large drow is here, dressed in black and gold armor.=A drow elite guard|A member of the Alterac high command opposes you=A captain of the Brettonian High Command|A huge warg stands before you, saliva dripping from its huge fangs.=A bloodthirsty warg|A warrior stands here looking at antiquity.=A Medjai Warrior|An elderly black wyrm, nearing death, staggers around here.=A Doomed Black Wyrm|A winged sinewy demon glides over the rooftops.=A greater nabassu|The soulcrusher glances at you with fear.=The soulcrusher|A drow warrior is here, training.=A drow warrior|A drow guard is here, sleeping in his bed.=A drow guard|A drow guard is here, playing cards.=A drow guard|A cabinet member is here debating important issues.=A Cabinet Member|A Whitebridge Councillor is here in discussion.=A Whitebridge Councillor|A great skeleton clad in full platemail raises his sword as you enter.=A Templar of Sarakesh|A black warg glances at you, apparently too tired to attempt to eat you.=A sleepy warg</value>
+      <json>{"A dragon skeleton stands here with smoke seeping from its nasal cavity.":"A skeletal dragon","An elven ranger scouts the surrounding hinterland":"An Elven waywatcher","A skeleton clad in a dark cloak stands here, hatred glowing in its eye sockets.":"An acolyte of Sarakesh","A drow is here, guarding the hallways.":"A drow guard","A minstrel of the argonauts stands here.":"uwman","A member of the Trojan Royal House stands here.":"A member of the Trojan Royal House","You see the ghost of a long dead woman floating here.":"A ghost of a decapitated woman","A lesser lich of the Sarakeshian order glares at you with its empty eyes.":"An acolyte of Sarakesh","An angry looking soulcrusher is standing here.":"The soulcrusher","A Castle Guard stands here.":"The Castle Guard","A mythical being stands here.":"Ajax","A wizarne is here studying the arts of magic.":"A wizarne","A warrior lies here resting.":"A Medjai Warrior","The spirit of a dead sailor haunts the wreckage of his vessel.":"A revenant sailor","A mythical man of ancient Greece stands here.":"uwman","A deceased mariner haunts the cove here.":"A phantom mariner","A large Kronatio cityguard is standing here.":"A Guard of Khron","A winged hulking fiend stomps around here.":"A malebranche","A wizarn is here studying the arts of magic.":"A wizarn","A famed and glorious soldier stands here.":"A soldier","The ugly wight of a long-dead seafarer hovers here.":"A seafarer's wight","A hungry warg glares at you and licks its fangs.":"A hungry warg","a soldier of the gods stands here.":"A soldier","A great soulcrusher stands here.":"The Great Soulcrusher","A ghostly bilge-rat wails as it approaches you.":"A ghostly bilge-rat","The Lord of the Citadel is here looking at his maps.":"Lord Ceanyth","An executive officier of the city authority is busy working here.":"An Executive Officer","A warrior stands here protecting the gates of the palace.":"A Medjai Warrior","The musical son of Orpheus stands here.":"Musaeus","The decomposing corpse of a dragon stumbles around here.":"A dracolich","A creepy monster stands in front of you.":"The monster","A Fallen Knight stands guarding the Chamber of Paladine.":"A Fallen Knight","A brave soldier stands here having been rewarded by the gods.":"A brave soldier","A lieutenant of the high command oversees proceedings":"A lieutenant of the Brettonian High Command","A huge, ancient tree towers above you.":"A huge, ancient tree","A powerful witch of the hive is busy creating new incantations.":"A witch of the crescent moon","A white ambience surrounds this mutineer.":"The dead mutineer","A young initiate of the hive awaits instruction from her superiors here.":"An initiate of the crescent moon","The apparition of a shipwrecked buccaneer roams the cove.":"A phantasmal buccaneer","A blurred figure stands here.":"The soulcrusher","A warrior stands here protecting the palace.":"A Medjai Warrior","A warrior stands here overseeing the protection of Egypt.":"A Medjai Warrior","A mystical soulcrusher":"The mystical soulcrusher","This careless mariner died from alcohol poisoning rather than a shipwreck.":"A haunted grog-fiend","An old crone of the hive scrunches her face up at your presence.":"A crone of the crescent moon","A very large drow is here, dressed in black and gold armor.":"A drow elite guard","A member of the Alterac high command opposes you":"A captain of the Brettonian High Command","A huge warg stands before you, saliva dripping from its huge fangs.":"A bloodthirsty warg","A warrior stands here looking at antiquity.":"A Medjai Warrior","An elderly black wyrm, nearing death, staggers around here.":"A Doomed Black Wyrm","A winged sinewy demon glides over the rooftops.":"A greater nabassu","The soulcrusher glances at you with fear.":"The soulcrusher","A drow warrior is here, training.":"A drow warrior","A drow guard is here, sleeping in his bed.":"A drow guard","A drow guard is here, playing cards.":"A drow guard","A cabinet member is here debating important issues.":"A Cabinet Member","A Whitebridge Councillor is here in discussion.":"A Whitebridge Councillor","A great skeleton clad in full platemail raises his sword as you enter.":"A Templar of Sarakesh","A black warg glances at you, apparently too tired to attempt to eat you.":"A sleepy warg"}</json>
     </var>
     <trigger priority="1380">
       <pattern>^(*) is dead! R.I.P.</pattern>
@@ -2509,7 +2525,7 @@ autofightdecision</value>
   }
 }
 #IF %1=@currenttarget {fighting=0}
-;#say agglist : @agglist, assistlist : @assistlist
+#say agglist : @agglist, assistlist : @assistlist
 #IF @intrapulse {
   #ADD combatpulses 1
   }
@@ -2536,8 +2552,8 @@ waitstate=0
 #IF (@botstatus="On" and @roomscantoprompt=0) {#IF %1="A Doomed Black Wyrm" {#alarm +1 {botcommand}} {botcommand} {}}</value>
     </trigger>
     <var name="onewordmobs" type="Record">
-      <value>An Executive Officer=exec|An acolyte of Sarakesh=acoly|An initiate of the crescent moon=init|An Elven waywatcher=way|A dracolich=dracol|A bloodthirsty warg=bloodth|A wizarne is here studying the arts of magic.=wizarne|A ghost of a decapitated woman=woman|A phantom mariner=mariner|A witch of the crescent moon=witch|The dead mutineer=mutineer|A wizarn is here studying the arts of magic.=wizarn|A seafarer's wight=wight|A soldier=sold|A member of the Trojan Royal House=memb|A Whitebridge Councillor=counci|A drow elite guard=elite|A drow guard=drow|A drow warrior=warrior|A captain of the Brettonian High Command=mem|The Great Soulcrusher=great|A huge, ancient tree=ancient|A skeletal dragon=skeletal|A Templar of Sarakesh=templar|A haunted grog-fiend=grog|A wizarne=wizarne|A crone of the crescent moon=crone|A wizarn=wizarn|Musaeus=musaeus|A revenant sailor=sailor|A Medjai Warrior=medjai|A malebranche=malebranche|A Guard of Khron=guard|A ghostly bilge-rat=bilge|A Fallen Knight=knight|A brave soldier=sold|The monster=monster|A hungry warg=hungry|A mystical soulcrusher=mystica|uwman=man|A phantasmal buccaneer=buccaneer|A Cabinet Member=mem|A Doomed Black Wyrm=wyrm|Ajax=ajax|A greater nabassu=nabassu|A sleepy warg=sleepy|The soulcrusher=soulc|Lord Ceanyth=lord|A lieutenant of the Brettonian High Command=lieu</value>
-      <json>{"An Executive Officer":"exec","An acolyte of Sarakesh":"acoly","An initiate of the crescent moon":"init","An Elven waywatcher":"way","A dracolich":"dracol","A bloodthirsty warg":"bloodth","A wizarne is here studying the arts of magic.":"wizarne","A ghost of a decapitated woman":"woman","A phantom mariner":"mariner","A witch of the crescent moon":"witch","The dead mutineer":"mutineer","A wizarn is here studying the arts of magic.":"wizarn","A seafarer's wight":"wight","A soldier":"sold","A member of the Trojan Royal House":"memb","A Whitebridge Councillor":"counci","A drow elite guard":"elite","A drow guard":"drow","A drow warrior":"warrior","A captain of the Brettonian High Command":"mem","The Great Soulcrusher":"great","A huge, ancient tree":"ancient","A skeletal dragon":"skeletal","A Templar of Sarakesh":"templar","A haunted grog-fiend":"grog","A wizarne":"wizarne","A crone of the crescent moon":"crone","A wizarn":"wizarn","Musaeus":"musaeus","A revenant sailor":"sailor","A Medjai Warrior":"medjai","A malebranche":"malebranche","A Guard of Khron":"guard","A ghostly bilge-rat":"bilge","A Fallen Knight":"knight","A brave soldier":"sold","The monster":"monster","A hungry warg":"hungry","A mystical soulcrusher":"mystica","uwman":"man","A phantasmal buccaneer":"buccaneer","A Cabinet Member":"mem","A Doomed Black Wyrm":"wyrm","Ajax":"ajax","A greater nabassu":"nabassu","A sleepy warg":"sleepy","The soulcrusher":"soulc","Lord Ceanyth":"lord","A lieutenant of the Brettonian High Command":"lieu"}</json>
+      <value>An Executive Officer=exec|An acolyte of Sarakesh=acoly|An initiate of the crescent moon=init|An Elven waywatcher=way|A dracolich=dracol|A bloodthirsty warg=bloodth|A wizarne is here studying the arts of magic.=wizarne|A ghost of a decapitated woman=woman|A phantom mariner=mariner|A witch of the crescent moon=witch|The dead mutineer=mutineer|A wizarn is here studying the arts of magic.=wizarn|A seafarer's wight=wight|A soldier=sold|A member of the Trojan Royal House=memb|A Whitebridge Councillor=counci|A drow elite guard=elite|A drow guard=drow|A drow warrior=warrior|A captain of the Brettonian High Command=mem|The Great Soulcrusher=great|A huge, ancient tree=ancient|A skeletal dragon=skeletal|A Templar of Sarakesh=templar|A haunted grog-fiend=grog|A wizarne=wizarne|A crone of the crescent moon=crone|A wizarn=wizarn|Musaeus=musaeus|A revenant sailor=sailor|A Medjai Warrior=medjai|A malebranche=malebranche|A Guard of Khron=guard|A ghostly bilge-rat=bilge|A Fallen Knight=knight|A brave soldier=sold|The monster=monster|A hungry warg=hungry|A mystical soulcrusher=mystica|uwman=man|The Castle Guard=gua|A phantasmal buccaneer=buccaneer|A Cabinet Member=mem|A Doomed Black Wyrm=wyrm|Ajax=ajax|A greater nabassu=nabassu|A sleepy warg=sleepy|The soulcrusher=soulc|Lord Ceanyth=lord|A lieutenant of the Brettonian High Command=lieu</value>
+      <json>{"An Executive Officer":"exec","An acolyte of Sarakesh":"acoly","An initiate of the crescent moon":"init","An Elven waywatcher":"way","A dracolich":"dracol","A bloodthirsty warg":"bloodth","A wizarne is here studying the arts of magic.":"wizarne","A ghost of a decapitated woman":"woman","A phantom mariner":"mariner","A witch of the crescent moon":"witch","The dead mutineer":"mutineer","A wizarn is here studying the arts of magic.":"wizarn","A seafarer's wight":"wight","A soldier":"sold","A member of the Trojan Royal House":"memb","A Whitebridge Councillor":"counci","A drow elite guard":"elite","A drow guard":"drow","A drow warrior":"warrior","A captain of the Brettonian High Command":"mem","The Great Soulcrusher":"great","A huge, ancient tree":"ancient","A skeletal dragon":"skeletal","A Templar of Sarakesh":"templar","A haunted grog-fiend":"grog","A wizarne":"wizarne","A crone of the crescent moon":"crone","A wizarn":"wizarn","Musaeus":"musaeus","A revenant sailor":"sailor","A Medjai Warrior":"medjai","A malebranche":"malebranche","A Guard of Khron":"guard","A ghostly bilge-rat":"bilge","A Fallen Knight":"knight","A brave soldier":"sold","The monster":"monster","A hungry warg":"hungry","A mystical soulcrusher":"mystica","uwman":"man","The Castle Guard":"gua","A phantasmal buccaneer":"buccaneer","A Cabinet Member":"mem","A Doomed Black Wyrm":"wyrm","Ajax":"ajax","A greater nabassu":"nabassu","A sleepy warg":"sleepy","The soulcrusher":"soulc","Lord Ceanyth":"lord","A lieutenant of the Brettonian High Command":"lieu"}</json>
     </var>
     <trigger name="The slain wyrm hits the ground with a tremendous THUD and blood" priority="96790">
       <pattern>The slain wyrm hits the ground with a tremendous THUD and blood seeps from the corpse.</pattern>
@@ -2640,6 +2656,7 @@ spellbottarget=%1
 #IF (%2="gbless" and @ispriest=2) {cast 'group bless'}
 #IF (%2="holy" and @ispriest>0) {cast 'holyword'}
 #IF (%2="serenity" and @isanimist=2 and @charlevel>54) {cast 'serenity'}
+#IF (%2="sat" and @isanimist>0) {cast 'satiate' @spellbottarget}
 #IF (%2="tranq" and @isanimist=2) {cast 'tranquility'}
 #IF (%2="garm" and @ispriest=2) {cast 'group armor'}
 #IF (%2="fly" and @ismagician>0 and @fighting=0) {cast 'fly' @spellbottarget}
@@ -2647,7 +2664,7 @@ spellbottarget=%1
 #IF (%2="report") {report}
 ;#IF @spellbotsent=0 {#IF @fighting {t %1 Sorry, Fighting} {t %1 Sorry, probably can't cast that spell, or my script sucks.}]]></value>
     </alias>
-    <var name="spellbottarget">Mask</var>
+    <var name="spellbottarget">Neaga</var>
   </class>
   <class name="tells">
     <trigger priority="10">
@@ -2721,7 +2738,7 @@ spellbottarget=%1
     </trigger>
   </class>
   <class name="well">
-    <var name="lastgroupdir">west</var>
+    <var name="lastgroupdir">north</var>
     <trigger priority="3310">
       <pattern>A stalactite dislodges from the ceiling and plummets to the ground, narrowly$missing you. You fall over backwards from the shock.</pattern>
       <value>stand
@@ -2793,15 +2810,15 @@ windcoming=0</value>
       <value>balrogexits=@exits
 #alarm +1 {}</value>
     </trigger>
-    <var name="balrogexits">North|East|West</var>
+    <var name="balrogexits">North|South|Up|Down</var>
     <trigger priority="2860">
       <pattern>%w has summoned you!</pattern>
       <value>summonedsinceslip=1</value>
     </trigger>
     <var name="summonedsinceslip">1</var>
-    <var name="ahealslipped">0</var>
-    <var name="afightslipped">1</var>
-    <var name="slipdir">east</var>
+    <var name="ahealslipped">1</var>
+    <var name="afightslipped">0</var>
+    <var name="slipdir">west</var>
     <alias name="butch">
       <value>#IF %null(%1) {butcher corpse;butcher 2.corpse;butcher 3.corpse} {#loop 1,%1 {butcher %{i}.corpse}}</value>
     </alias>
@@ -2864,7 +2881,7 @@ stand
         </button>
       </button>
     </class>
-    <class name="copbuttons" enabled="false">
+    <class name="copbuttons">
       <button name="cop" type="Toggle" variable="acop" iconleft="false" color="gray" priority="117333">
         <caption>Acop: OFF</caption>
         <button>
@@ -3049,9 +3066,9 @@ loot=0</value>
   </loc>
   <tab name="danimal"/>
   <tab name="grou"/>
-  <var name="combatpulses">493</var>
+  <var name="combatpulses">351</var>
 </window>
-<window name="tell" commandline="false" statusbar="false" dockalign="Top" left="1051" top="289" width="441" height="1237" host="none">
+<window name="tell" commandline="false" statusbar="false" dockalign="Top" left="1051" top="289" width="530" height="994" host="none">
   <uid>{856C42AF-734A-4ED4-BE79-FE995F5B06AF}</uid>
   <dockuid>{601F6102-6F51-4839-B1E5-381D54467980}</dockuid>
   <packages>English Directions|English Keypad|Clickable URLs|unsavory|DSPublic</packages>
